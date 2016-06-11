@@ -1,0 +1,34 @@
+{
+  "name": "mdat",
+  "version": "1.0.0",
+  "description": "learn grunt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jandysang/module-Automatic.git"
+  },
+  "keywords": [
+    "grunt",
+    "git",
+    "requireJS"
+  ],
+  "author": "jandysang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jandysang/module-Automatic/issues"
+  },
+  "homepage": "https://github.com/Jandysang/module-Automatic#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "load-grunt-tasks": "^3.5.0",
+    "time-grunt": "^1.3.0"
+  },
+  "dependencies": {
+    "grunt": "^1.0.1"
+  }
+}
