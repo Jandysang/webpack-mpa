@@ -8,55 +8,56 @@ var del = require("del");
 var $ = gulpLoadPlugins();
 
 gulp.task("styles", function() {
-    return gulp.src("app/styles/*.scss")
+    return gulp.src("app/common/curise-nav/scss/*.scss")
         .pipe($.plumber())
         .pipe($.sass.sync({
             outputStyle: 'expanded',
             precision: 10,
             includePaths: ['.']
         }).on('error', $.sass.logError))
-        .pipe(gulp.dest("dist/styles"));
+        .pipe(gulp.dest("dist/common/curise-nav/styles"));
 });
 
 gulp.task("scripts", function() {
-    return gulp.src("app/scripts/**/*.js")
+    return gulp.src("app/common/curise-nav/scripts/**/*.js")
         .pipe($.plumber())
         .pipe($.babel())
-        .pipe(gulp.dest("dist/scripts"));
+        .pipe($.concat("t.js"))
+        .pipe(gulp.dest("dist/common/curise-nav/scripts"));
 });
 
 gulp.task("jshint", function() {
-    return gulp.src("app/scripts/**/*.js")
+    return gulp.src("app/common/curise-nav/scripts/**/*.js")
         .pipe($.jshint())
         .pipe($.jshint.reporter("jshint-stylish"))
         .pipe($.jshint.reporter("fail"));
 });
 
 gulp.task("cssmin", ['styles'], function() {
-    return gulp.src("dist/styles/*.css")
+    return gulp.src("dist/common/curise-nav/styles/*.css")
         .pipe($.cssnano({ safe: true, autoprefixer: false }))
-        .pipe(gulp.dest('dist2/styles'));
+        .pipe(gulp.dest('dist2/common/curise-nav/styles'));
 })
 
 gulp.task("jsmin", [/*"jshint",*/ "scripts"], function() {
-    return gulp.src("dist/scripts/**/*.js")
+    return gulp.src("dist/common/curise-nav/scripts/**/*.js")
         .pipe($.uglify())
-        .pipe(gulp.dest("dest2/scripts"));
+        .pipe(gulp.dest("dist2/common/curise-nav/scripts"));
 });
 
 gulp.task("imagesmin", function() {
-    return gulp.src("app/images/**/*")
+    return gulp.src("app/common/curise-nav/images/**/*")
         .pipe($.cache($.imagemin({
             progressive: true,
             interlaced: true,
             svgoPlugins: [{ cleanupIDs: false }]
         })))
-        .pipe(gulp.dest("dist2/images"));
+        .pipe(gulp.dest("dist2/common/curise-nav/images"));
 });
 
 gulp.task("watch", function() {
-    gulp.watch('app/styles/**/*.scss', ['styles']);
-    gulp.watch('app/scripts/**/*.js', ['scripts']);
+    gulp.watch('app/common/curise-nav/scss/**/*.scss', ['styles']);
+    gulp.watch('app/common/curise-nav/scripts/**/*.js', ['scripts']);
 });
 
 gulp.task("clean", del.bind(null, ['dist', 'dist2']));
