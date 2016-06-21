@@ -28,8 +28,10 @@ gulp.task("scripts", function() {
 
 gulp.task("jshint", function() {
     return gulp.src("app/common/curise-nav/scripts/**/*.js")
+    //return gulp.src(["app/common/curise-nav/scripts/common-nav.3.0.js"])
         .pipe($.jshint())
-        .pipe($.jshint.reporter("jshint-stylish"))
+        .pipe($.jshint.reporter("default"))
+        //.pipe($.jshint.reporter("jshint-stylish"))
         .pipe($.jshint.reporter("fail"));
 });
 
@@ -75,6 +77,6 @@ gulp.task("build", [ /*"jshint",*/ "cssmin", "jsmin", "imagesmin"], function() {
 })
 
 
-gulp.task("default", ["clean"], function() {
-    gulp.start("build");
+gulp.task("default", ["clean","build"], function() {
+    //gulp.start("build");
 });

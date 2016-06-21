@@ -17,6 +17,10 @@
   zoom: 1;
 }
 
+body {
+  background-color: red;
+}
+
 content {
   /* -webkit-user-select:none;
         -moz-user-select:none;

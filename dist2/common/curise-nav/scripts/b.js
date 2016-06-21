@@ -1,1 +1,1 @@
-define("b",["fish"],function(n){function i(){alert("对话框关闭事件")}return{tarClick:i}});
+define("b",["fish"],function(i){function n(){var n=i.one(window).scrollTop(),o=i.one(window).height();n>o?i.one(".ylc-nav .ylc-gotop").css("visibility:visible;"):i.one(".ylc-nav .ylc-gotop").css("visibility:hidden;")}return{isPosition:n}});
