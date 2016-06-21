@@ -17,11 +17,6 @@
   zoom: 1;
 }
 
-body {
-  background-color: red;
-  border-bottom: 10px solid blue;
-}
-
 content {
   /* -webkit-user-select:none;
         -moz-user-select:none;

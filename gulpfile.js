@@ -22,7 +22,7 @@ gulp.task("scripts", function() {
     return gulp.src("app/common/curise-nav/scripts/**/*.js")
         .pipe($.plumber())
         .pipe($.babel())
-        .pipe($.concat("t.js"))
+        //.pipe($.concat("t.js"))
         .pipe(gulp.dest("dist/common/curise-nav/scripts"));
 });
 
@@ -33,13 +33,21 @@ gulp.task("jshint", function() {
         .pipe($.jshint.reporter("fail"));
 });
 
+gulp.task("jsconcat", ["scripts"], function() {
+    return gulp.src(["app/common/curise-nav/scripts/a.js", "app/common/curise-nav/scripts/b.js", "app/common/curise-nav/scripts/c.js", "app/common/curise-nav/scripts/d.js"])
+        .pipe($.plumber())
+        .pipe($.babel())
+        .pipe($.concat("common-nav.3.1.js", { newLine: ';' }))
+        .pipe(gulp.dest("dist/common/curise-nav/scripts"));
+})
+
 gulp.task("cssmin", ['styles'], function() {
     return gulp.src("dist/common/curise-nav/styles/*.css")
         .pipe($.cssnano({ safe: true, autoprefixer: false }))
         .pipe(gulp.dest('dist2/common/curise-nav/styles'));
 })
 
-gulp.task("jsmin", [/*"jshint",*/ "scripts"], function() {
+gulp.task("jsmin", [ /*"jshint",*/ "jsconcat"], function() {
     return gulp.src("dist/common/curise-nav/scripts/**/*.js")
         .pipe($.uglify())
         .pipe(gulp.dest("dist2/common/curise-nav/scripts"));
@@ -57,16 +65,16 @@ gulp.task("imagesmin", function() {
 
 gulp.task("watch", function() {
     gulp.watch('app/common/curise-nav/scss/**/*.scss', ['styles']);
-    gulp.watch('app/common/curise-nav/scripts/**/*.js', ['scripts']);
+    gulp.watch('app/common/curise-nav/scripts/**/*.js', ['jsconcat']);
 });
 
 gulp.task("clean", del.bind(null, ['dist', 'dist2']));
 
-gulp.task("build", [/*"jshint",*/ "cssmin", "jsmin", "imagesmin"], function() {
+gulp.task("build", [ /*"jshint",*/ "cssmin", "jsmin", "imagesmin"], function() {
     return gulp.src('dist2/**/*').pipe($.size({ title: 'build', gzip: true }));
 })
 
 
-gulp.task("default",["clean"],function(){
-	gulp.start("build");
+gulp.task("default", ["clean"], function() {
+    gulp.start("build");
 });

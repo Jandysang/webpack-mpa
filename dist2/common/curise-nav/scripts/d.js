@@ -1,0 +1,1 @@
+define("d",["fish"],function(n){return"123123123"});

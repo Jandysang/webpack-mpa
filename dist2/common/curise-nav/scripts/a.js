@@ -1,0 +1,1 @@
+define("a",["fish"],function(n){function t(){alert("回到顶部事件")}return{gotop:t}});

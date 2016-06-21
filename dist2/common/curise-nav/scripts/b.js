@@ -1,0 +1,1 @@
+define("b",["fish"],function(n){function i(){alert("对话框关闭事件")}return{tarClick:i}});

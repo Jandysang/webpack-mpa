@@ -1,0 +1,1 @@
+define("a",["fish"],function(n){function t(){alert("回到顶部事件")}return{gotop:t}}),define("b",["fish"],function(n){function t(){alert("对话框关闭事件")}return{tarClick:t}}),define("c",["fish"],function(n){return{timer:1e4,anthor:"syt4528"}}),define("d",["fish"],function(n){return"123123123"});
