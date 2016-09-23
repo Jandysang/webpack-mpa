@@ -1,0 +1,5 @@
+.tmp
+build_artifacts
+dist
+node_modules
+DEVELOP.txt

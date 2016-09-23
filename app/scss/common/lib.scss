@@ -1,0 +1,63 @@
+//pc scss 基础类仓库
+// 圆角
+@mixin border-radius($topleft: 5px, $topright: 5px, $bottomleft: 5px, $bottomright: 5px) {
+    -webkit-border-radius: $topleft $topright $bottomleft $bottomright;
+    -moz-border-radius: $topleft $topright $bottomleft $bottomright;
+    -o-border-radius: $topleft $topright $bottomleft $bottomright;
+    -ms-border-radius: $topleft $topright $bottomleft $bottomright;
+    border-radius: $topleft $topright $bottomleft $bottomright;
+}
+
+// 阴影-透明程度
+@mixin box-shadow($x: 0px, $y: 3px, $blur: 5px, $alpha:0.5) {
+    -webkit-box-shadow: $x $y $blur rgba(0, 0, 0, $alpha);
+    -moz-box-shadow: $x $y $blur rgba(0, 0, 0, $alpha);
+    -o-box-shadow: $x $y $blur rgba(0, 0, 0, $alpha);
+    -ms-box-shadow: $x $y $blur rgba(0, 0, 0, $alpha);
+    box-shadow: $x $y $blur rgba(0, 0, 0, $alpha);
+}
+
+// 阴影-颜色渐变
+@mixin box-shadow-color($x: 0px, $y: 3px, $blur: 5px, $color:#000) {
+    -webkit-box-shadow: $x $y $blur $color;
+    -moz-box-shadow: $x $y $blur $color;
+    -o-box-shadow: $x $y $blur $color;
+    -ms-box-shadow: $x $y $blur $color;
+    box-shadow: $x $y $blur $color;
+}
+
+// 半透明
+@mixin opacity($p:0.5) {
+    $pp: $p * 100;
+    filter: alpha(opacity=$pp);
+    -moz-opacity: $p;
+    opacity: $p;
+}
+
+// 单行省略号
+@mixin ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// 多行省略号
+@mixin mutil-ellipsis($num:2) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $num;
+    -webkit-box-orient: vertical;
+}
+
+//背景垂直线性渐变 --IE8、9使用纯色
+@mixin background-linear-gradient($color:#ddd, $p:0.2) {
+    $pp: $p*100 +%;
+    $ppp: (1-$p)*100+%;
+    background: $color \9;
+    background: -webkit-linear-gradient(transparent 0, $color $pp, $color $ppp, transparent 100%);
+    background: -o-linear-gradient(transparent 0, $color $pp, $color $ppp, transparent 100%);
+    background: -moz-linear-gradient(transparent 0, $color $pp, $color $ppp, transparent 100%);
+    background: linear-gradient(transparent 0, $color $pp, $color $ppp, transparent 100%);
+    
+}

@@ -1,0 +1,8 @@
+{
+    "deployProjectDirName": "cn/y/16",
+    "projectList": [
+        "home",
+        "final"
+    ],
+    "devServerPort": 9000
+}

@@ -1,0 +1,701 @@
+@import "variable.scss";
+.unit- {
+    /* 可选资源 */
+    &other {}
+    /* 费用说明 */
+    &expense {}
+    /* 签证说明 */
+    &visa {}
+    /* 预订须知 */
+    &booking {}
+    /* 游记攻略 */
+    &travel {}
+}
+
+
+/* 可选资源 */
+
+.other- {
+    &pro {
+        .icon {
+            background:url(#{$urlStr}icon.png?v=01) no-repeat;
+        }
+        &-list {
+            border-bottom: 1px solid #eee;
+        }
+        &-txt {
+            height: 55px;
+            line-height: 56px;
+            font-size: 14px;
+            >div {
+                display: inline-block;
+                overflow: hidden;
+            }
+        }
+        &-tit {
+            font-size: 16px;
+            width: 740px;
+            overflow: hidden;
+            height: 56px;
+            line-height: 56px;
+            @include ellipsis;
+            >span {
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 28px;
+                em,
+                i {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                i {
+                    width: 60px;
+                    height: 8px;
+                    margin: 0 8px;
+                    background-position: -30px -166px !important;
+                    &.back {
+                        background-position: -30px -182px !important;
+                    }
+                }
+            }
+        }
+        &-price {
+            text-indent: 10px;
+            width: 260px;
+            color: #ff7007;
+        }
+        &-more {
+            width: 50px;
+            color: #60a1f4;
+            cursor: pointer;
+        }
+        &-detail {
+            margin-bottom: 10px;
+            .note {
+                font-size: 12px;
+                line-height: 24px;
+                color: #666;
+            }
+            .go,
+            .return {
+                padding: 20px 0;
+                .border {
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 22px;
+                    padding: 39px 0;
+                    background-color: #60a1f4;
+                    color: #fff;
+                    font-size: 12px;
+                    em {
+                        display: block;
+                        text-align: center;
+                        padding: 5px 0;
+                    }
+                }
+                .box {
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-left: 20px;
+                    width: 950px;
+                    height: 138px;
+                    .box-tit {
+                        font-size: 14px;
+                        height: 22px;
+                        em {
+                            margin-right: 40px;
+                        }
+                    }
+                    .item {
+                        font-size: 12px;
+                        line-height: 24px;
+                        overflow: hidden;
+                        &.first {
+                            padding-bottom: 10px;
+                        }
+                        &.last {
+                            border-top: 1px dashed #eee;
+                            padding-top: 10px;
+                        }
+                        >div {
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+                        .fly-name {
+                            color: #777;
+                            width: 270px;
+                            p {
+                                max-width: 16em;
+                                @include ellipsis;
+                            }
+                        }
+                        .flying {
+                            width: 530px;
+                            color: #666;
+                            >div {
+                                display: inline-block;
+                                vertical-align: middle;
+                            }
+                            .fly-ing {
+                                width: 170px;
+                                height: 5px;
+                                margin: 0 28px;
+                                background-position: 0 -203px;
+                            }
+                            .fly-start,
+                            .fly-end {
+                                p {
+                                    max-width: 12em;
+                                    @include ellipsis;
+                                }
+                            }
+                        }
+                        .fly-time {
+                            color: #666;
+                        }
+                    }
+                }
+            }
+            .go {
+                padding-top: 0;
+            }
+            .return {
+                background:url(#{$urlStr}fly_bg.png) top repeat-x;
+            }
+        }
+    }
+}
+
+
+/* 费用说明 */
+
+.expense- {
+    &pro {
+        &-list {
+            font-size: 14px;
+            line-height: 26px;
+            padding-top: 15px;
+            overflow: hidden;
+            >div {
+                display: inline-block;
+                vertical-align: top;
+            }
+        }
+        &-tit {
+            width: 120px;
+            font-weight: bold;
+        }
+        &-note {
+            width: 930px;
+            color: #666;
+        }
+    }
+}
+
+
+/* 签证说明 */
+.visa-pro-counts .imgBtn,
+.visa-pro-counts .operationBtn{
+    background:url(#{$urlStr}default-skin.png) no-repeat;
+}
+.visa- {
+    &pro {
+        &-list {
+            font-size: 14px;
+            line-height: 26px;
+            padding-top: 15px;
+            overflow: hidden;
+            >div {
+                display: inline-block;
+                vertical-align: top;
+            }
+        }
+        &-tit {
+            width: 120px;
+            font-weight: bold;
+        }
+        &-note {
+            width: 930px;
+            color: #666;
+        }
+        &-counts {
+            margin-top: 15px;
+            margin-left: 120px;
+            width: 930px;
+            border-top: 1px solid #eee;
+        }
+        &-countImg{
+            display: none;
+            .layer{
+                position:fixed;
+                top:0;
+                left:0;
+                width: 100%;
+                height: 100%;
+                background:#000;
+                z-index: 10001;
+            }
+            .countImgBox{
+                position:fixed;
+                top:0;
+                left:0;
+                width: 100%;
+                height: 100%;
+                z-index: 10000;
+                .imgnum{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 44px;
+                    font-size: 13px;
+                    line-height: 44px;
+                    color: #FFF;
+                    padding: 0 10px; 
+                    z-index: 10003;                   
+                }
+                .operation{
+                    position:absolute;
+                    right: 0;
+                    top: 0;
+                    z-index: 10003;
+                    .operationBtn{
+                        position:absolute;
+                        top:0;
+                        width: 44px;
+                        height: 44px;
+                        cursor: pointer;                     
+                    }
+                    .operationClose{
+                        right: 0;
+                        background-position: 0 -44px;
+                    }
+                    .operationZoom{
+                        right: 44px;
+                        background-position: -88px 0;
+                    }
+                    .operation-Zoom{
+                        background-position: -132px 0;
+                    }
+                }
+                .imgBox{
+                    position:absolute;
+                    left: 50%;
+                    top:5%;
+                    height: 90%;
+                    -webkit-transition: .5s;
+                    transition: .5s;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                    &-bigimgBox{
+                        left: 50%;
+                        top:0;
+                        height: 100%;
+                    }
+                    z-index: 10002;
+                }
+                .imgBtn{
+                    position:absolute;
+                    top:50%;
+                    margin-top: -50px;
+                    width: 70px;
+                    height: 100px;
+                    cursor: pointer;
+                    z-index: 10003;
+                }
+                .imgBtnPrev{
+                    left:0;
+                    background-position: -120px -30px;
+                }
+                .imgBtnNext{
+                    right:0;
+                    background-position: -75px -30px;
+                }
+            }
+        }
+        &-count {
+            border-bottom: 1px solid #eee;
+        }
+        &-li {
+            height: 44px;
+            line-height: 44px;
+            font-size: 14px;
+            >div {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .tit {
+                width: 870px;
+            }
+            .more {
+                width: 50px;
+                cursor: pointer;
+                color: #60a1f4;
+            }
+        }
+        &-detail {
+            width: 910px;
+            .type {
+                padding-left: 20px;
+                height: 34px;
+                line-height: 34px;
+                background: #f3f8fe;
+                font-size: 12px;
+                color: #666;
+            }
+            .tabs {
+                margin-top: 15px;
+                >a {
+                    display: inline-block;
+                    padding: 0 10px;
+                    height: 33px;
+                    line-height: 32px;
+                    font-size: 14px;
+                    text-align: center;
+                    color: #333;
+                    background-color: #f7f7f7;
+                    border: 1px solid #f7f7f7;
+                    border-top-width: 2px;
+                    margin-right: 3px;
+                    &.at {
+                        border-color: #eee;
+                        border-top-color: #60a1f4;
+                        background-color: #fff;
+                        color: #60a1f4;
+                    }
+                }
+            }
+            .counts {
+                margin-top: 15px;
+                margin-bottom: 20px;
+            }
+            .count {
+                table {
+                    position: relative;
+                    margin-top: 10px;
+                    width: 910px;
+                    border: 1px solid #eee;
+                    border-top: 0;
+                    font: 14px/24px "microsoft yahei";
+                    th {
+                        height: 12px;
+                        background: #f7f7f7;
+                        text-align: center;
+                        font-weight: normal
+                    }
+                }
+                .tab_td_con {
+                    padding: 10px 0;
+                    border-top: 1px solid #eee;
+                    border-left: 1px solid #eee;
+                    width: 550px;
+                    div {
+                        padding-left: 30px;
+                    }
+                }
+                .tab_td_img{
+                    border-top: 1px solid #eee;
+                    border-left: 1px solid #eee;
+                    width: 200px;
+                    text-align: center;
+                    span{
+                        color: #0066cc;
+                        cursor:pointer;
+                        .tab_td_img_icon{
+                            display: inline-block;
+                            margin-right: 5px;
+                            width: 16px;
+                            height: 12px;
+                            background:url(#{$urlStr}icon.png?v=02) no-repeat;
+                            background-position:-68px -258px;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+                .tab_td_title {
+                    text-align: center;
+                    width: 155px;
+                    border-top: 1px solid #eee;
+                }
+            }
+        }
+    }
+}
+
+
+/* 预订须知 */
+
+.booking- {
+    &pro {
+        padding-top: 25px;
+        .icon {
+            background:url(#{$urlStr}icon.png?v=01) no-repeat;
+        }
+        &-tabbox {
+            position: relative;
+            float: left;
+            width: 80px;
+            min-height: 200px;
+        }
+        &-tabs {
+            position: absolute;
+            top: 0;
+            width: 80px;
+            li {
+                width: 78px;
+                height: 38px;
+                line-height: 38px;
+                border-left: 2px solid #fff;
+                text-align: center;
+                font-size: 14px;
+                color: #666;
+                cursor: pointer;
+                &.at {
+                    background-color: #f8f8f8;
+                    border-left-color: #7eb2f5;
+                    color: #60a1f4;
+                }
+            }
+        }
+        &-counts {
+            float: left;
+            width: 980px;
+        }
+        &-count {
+            background-color: #f8f8f8;
+            padding: 20px;
+            &.booking-pro-store {
+                padding-right: 0;
+            }
+            .tabs {
+                li {
+                    display: inline-block;
+                    margin-right: 10px;
+                    margin-bottom: 12px;
+                    width: 79px;
+                    height: 20px;
+                    line-height: 20px;
+                    text-align: center;
+                    font-size: 12px;
+                    color: #999;
+                    border: 2px solid #e8e7e7;
+                    background-color: #fff;
+                    cursor: pointer;
+                    &:hover {
+                        border-color: #60a1f4;
+                        color: #60a1f4;
+                    }
+                    &.at {
+                        position: relative;
+                        border-color: #60a1f4;
+                        color: #60a1f4;
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            right: -1px;
+                            bottom: -1px;
+                            width: 20px;
+                            height: 19px;
+                            background:url(#{$urlStr}icon.png?v=01) -114px -150px no-repeat;
+                        }
+                        //background:url();
+                    }
+                }
+            }
+            .counts {}
+            .count {
+                font-size: 14px;
+                line-height: 24px;
+                .item {
+                    display: inline-block;
+                    width: 476px;
+                    color: #666;
+                    margin: 5px 0;
+                    vertical-align: top;
+                    p {
+                        margin-left: 10px;
+                        line-height: 28px;
+                        &.tit {
+                            margin-left: 0;
+                            color: #333;
+                            font-weight: bold;
+                            em {
+                                margin-right: 3px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-sign {
+            > li {
+                width: 390px;
+                height: 80px;
+                display: inline-block;
+                vertical-align: top;
+                border: 3px solid #e8e7e7;
+                padding: 10px 24px;
+                margin-right: 20px;
+                background-color: #fff;
+                color: #666;
+                overflow: hidden;
+                .tit {
+                    height: 1px;
+                    margin: 16px 0;
+                    background-color: #ddd;
+                    position: relative;
+                    z-index: 0;
+                    span {
+                        position: relative;
+                        top: -10px;
+                        display: block;
+                        margin: 0 auto;
+                        width: 90px;
+                        background-color: #fff;
+                        text-align: center;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        &-pay {
+            margin-top: 10px;
+            .pay-tit {
+                font-size: 14px;
+                font-weight: bold;
+                line-height: 24px;
+                em {
+                    margin-right: 5px;
+                }
+            }
+            ul {
+                li {
+                    position: relative;
+                    padding-left: 70px;
+                    line-height: 24px;
+                    >span {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* 游记攻略 */
+
+.travel- {
+    &pro {
+        padding-top: 15px;
+    }
+    &pro {
+        &-list {
+            height: 130px;
+            overflow: hidden;
+            margin: 15px 0;
+        }
+        &-img {
+            float: left;
+            width: 200px;
+            height: 130px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &-txt {
+            float: left;
+            margin-left: 20px;
+            width: 840px;
+            .tit {
+                display: block;
+                font-size: 18px;
+                color: #333;
+                &:hover {
+                    font-weight: bold;
+                    color: #60a1f4;
+                }
+            }
+            p {
+                font-size: 14px;
+                line-height: 26px;
+                color: #666;
+                height: 26px*3;
+                margin-top: 12px;
+                @include mutil-ellipsis(3);
+            }
+            .info {
+                >span {
+                    font-size: 12px;
+                    margin-right: 25px;
+                    em,
+                    a,
+                    i {
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                    a {
+                        color: #60a1f4;
+                    }
+                    i {
+                        width: 22px;
+                        height: 12px;
+                        background:url(#{$urlStr}icon.png?v=01) no-repeat;
+                    }
+                    em {
+                        color: #666;
+                    }
+                    &.author {
+                        i {
+                            background-position: -138px 0;
+                        }
+                    }
+                    &.view {
+                        i {
+                            background-position: -138px -30px;
+                        }
+                    }
+                }
+            }
+        }
+        &-more {
+            padding-top: 15px;
+            text-align: center;
+            a {
+                display: inline-block;
+                height: 28px;
+                line-height: 28px;
+                padding: 0 12px;
+                font-size: 14px;
+                color: #666;
+                border: 1px solid #ddd;
+                &:hover {
+                    color: #60a1f4;
+                    border-color: #60a1f4;
+                }
+            }
+        }
+        &-nothing {
+            margin: 0 auto;
+            width: 480px;
+            padding: 15px 0;
+            >div {
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 14px;
+                line-height: 34px;
+            }
+            .img {
+                width: 68px;
+                height: 68px;
+                margin-right: 25px;
+                background: url(#{$urlStr}none-travel.png) no-repeat
+            }
+        }
+    }
+}

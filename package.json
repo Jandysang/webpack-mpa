@@ -1,41 +1,67 @@
 {
-  "name": "mdat",
+  "name": "tc-cruise",
   "version": "0.0.1",
-  "description": "learn gulp",
-  "main": "index.js",
+  "description": "同程旅游邮轮pc项目源码",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Jandysang/module-Automatic.git"
-  },
   "keywords": [
-    "gulp",
     "git",
-    "requireJS"
+    "gulp",
+    "sass",
+    "requirejs"
   ],
-  "author": "sangming12@sina.cn",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Jandysang/module-Automatic/issues"
-  },
-  "homepage": "https://github.com/Jandysang/module-Automatic#readme",
+  "author": "syt4528@ly.com",
+  "license": "MIT",
   "devDependencies": {
-    "del": "^2.2.0",
+    "babel": "^6.5.2",
+    "babel-core": "^6.14.0",
+    "babel-register": "^6.14.0",
+    "browser-sync": "^2.16.0",
+    "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-cache": "^0.4.5",
     "gulp-concat": "^2.6.0",
     "gulp-cssnano": "^2.1.2",
-    "gulp-imagemin": "^3.0.1",
-    "gulp-jshint": "^2.0.1",
-    "gulp-load-plugins": "^1.2.4",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-if": "^2.0.1",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-load-plugins": "^1.3.0",
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^2.3.2",
     "gulp-size": "^2.1.0",
-    "gulp-uglify": "^1.5.3",
-    "jshint": "^2.9.2"
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-useref": "^3.1.2",
+    "gulp-webpack": "^1.5.0",
+    "yargs": "^5.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.14.0",
+    "babel-register": "^6.14.0",
+    "browser-sync": "^2.16.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-cache": "^0.4.5",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-if": "^2.0.1",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-load-plugins": "^1.3.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-useref": "^3.1.2",
+    "gulp-webpack": "^1.5.0",
+    "vinyl-named": "^1.1.0",
+    "yargs": "^5.0.0"
+  }
 }
