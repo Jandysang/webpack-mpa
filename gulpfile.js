@@ -64,6 +64,7 @@ function getFileArr(_develop, _type) { //获取需要编辑的文件（主要是
 function _compileJS(_develop) {
     return gulp.src(getFileArr(_develop, "js"))
         .pipe($.plumber())
+<<<<<<< HEAD
         .pipe(named())
         .pipe($.webpack())
         .pipe(gulp.dest("build_artifacts/build/" + config.deployProjectDirName + "/" + version))
@@ -73,6 +74,20 @@ function _compileJS(_develop) {
 
 gulp.task("compileJS", function() {
     return _compileJS.call(this, argv.develop);
+=======
+        .pipe($.babel())
+        //.pipe($.concat("t.js"))
+        .pipe(gulp.dest("dist/common/curise-nav/scripts"));
+});
+
+gulp.task("jshint", function() {
+    return gulp.src("app/common/curise-nav/scripts/**/*.js")
+    //return gulp.src(["app/common/curise-nav/scripts/common-nav.3.0.js"])
+        .pipe($.jshint())
+        .pipe($.jshint.reporter("default"))
+        //.pipe($.jshint.reporter("jshint-stylish"))
+        .pipe($.jshint.reporter("fail"));
+>>>>>>> 803270b6a83dc7499eb9de121f3b04b8299b034b
 });
 gulp.task("buildJS", ["clean", 'compileJS'], function() {
     return gulp.src(".temp/js/*.js")
@@ -90,6 +105,7 @@ gulp.task("buildJS", ["clean", 'compileJS'], function() {
         .pipe(gulp.dest("build_artifacts/build/" + config.deployProjectDirName + "/" + version))
         .pipe(gulp.dest("dist/js"));
 
+<<<<<<< HEAD
 })
 
 
@@ -108,6 +124,26 @@ gulp.task("clean", del.bind(null, ["build_artifacts", "dist", '.temp']));
 
 gulp.task('build', ["html", "images"], function() {
     return gulp.src("dist/**/*").pipe($.size({ title: "build", gzip: true }));
+=======
+gulp.task("jsconcat", ["scripts"], function() {
+    return gulp.src(["app/common/curise-nav/scripts/a.js", "app/common/curise-nav/scripts/b.js", "app/common/curise-nav/scripts/c.js", "app/common/curise-nav/scripts/d.js"])
+        .pipe($.plumber())
+        .pipe($.babel())
+        .pipe($.concat("common-nav.3.1.js", { newLine: ';' }))
+        .pipe(gulp.dest("dist/common/curise-nav/scripts"));
+})
+
+gulp.task("cssmin", ['styles'], function() {
+    return gulp.src("dist/common/curise-nav/styles/*.css")
+        .pipe($.cssnano({ safe: true, autoprefixer: false }))
+        .pipe(gulp.dest('dist2/common/curise-nav/styles'));
+})
+
+gulp.task("jsmin", [ /*"jshint",*/ "jsconcat"], function() {
+    return gulp.src("dist/common/curise-nav/scripts/**/*.js")
+        .pipe($.uglify())
+        .pipe(gulp.dest("dist2/common/curise-nav/scripts"));
+>>>>>>> 803270b6a83dc7499eb9de121f3b04b8299b034b
 });
 
 gulp.task("images", function() {
@@ -124,6 +160,7 @@ gulp.task("images", function() {
         .pipe(gulp.dest('dist/images'));
 });
 
+<<<<<<< HEAD
 gulp.task("html", ["styles", "scripts"], function() {
     return gulp.src("app/pages/*.html")
         .pipe($.useref({ searchPath: ['.tmp', 'app', '.'] }))
@@ -136,9 +173,15 @@ gulp.task("html", ["styles", "scripts"], function() {
         }).on('error', $.sass.logError)))
         .pipe($.if('*.html', $.htmlmin({ collapseWhitespace: true })))
         .pipe(gulp.dest('dist'));
+=======
+gulp.task("watch", function() {
+    gulp.watch('app/common/curise-nav/scss/**/*.scss', ['styles']);
+    gulp.watch('app/common/curise-nav/scripts/**/*.js', ['jsconcat']);
+>>>>>>> 803270b6a83dc7499eb9de121f3b04b8299b034b
 });
 
 
+<<<<<<< HEAD
 gulp.task('styles', function() {
     return gulp.src('app/scss/**/*.scss')
         .pipe($.plumber())
@@ -184,4 +227,13 @@ gulp.task("serve", ["styles", 'scripts'], function() {
         'app/scss/**/*.scss',
         'app/images/**/*'
     ]).on('change', reload);
+=======
+gulp.task("build", [ /*"jshint",*/ "cssmin", "jsmin", "imagesmin"], function() {
+    return gulp.src('dist2/**/*').pipe($.size({ title: 'build', gzip: true }));
+})
+
+
+gulp.task("default", ["clean","build"], function() {
+    //gulp.start("build");
+>>>>>>> 803270b6a83dc7499eb9de121f3b04b8299b034b
 });
