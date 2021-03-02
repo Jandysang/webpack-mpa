@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="layoutDefault">
+        <div id="layoutDefault_content">
+            <main>
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    <div class="container">
+                        <a class="navbar-brand" href="#">
+                            <img src="../../assets/image/push+.png" alt="psuh+" />
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto mr-lg-2">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">首页</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">一对一推送</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">一对多推送</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">文档</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">退出</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </main>
+            <div class="container">
+                <div class="row justify-content-center flex-column align-items-center my-4">
+                    <img src="../../assets/image/showqrcode.jpeg" alt="" style="max-width: 20rem;" />
+                    <p class="my-4 h5 text-body">微信扫码登录</p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="card my-4">
+                    <div class="card-header">
+                        <h3>调用方式</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="jumbotron bg-light py-3 px-3">
+                            <div class="bg-secondary text-white border">
+                                <button type="button" class="btn btn-primary btn-sm text-white text-nowrap mx-2 my-2"
+                                    data-toggle="modal" data-target="#addModal">新增群组</button>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover">
+                                    <thead class="bg-secondary text-white">
+                                        <tr>
+                                            <th>
+                                                <p class="text-nowrap my-0">群组id</p>
+                                            </th>
+                                            <th>
+                                                <p class="text-nowrap my-0">群组名称</p>
+                                            </th>
+                                            <th>
+                                                <p class="text-nowrap my-0">群组编号</p>
+                                            </th>
+                                            <th>
+                                                <p class="text-nowrap my-0">创建时间</p>
+                                            </th>
+                                            <th>
+                                                <p class="text-nowrap my-0">操作</p>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>17</td>
+                                            <td>测试111测</td>
+                                            <td>123456</td>
+                                            <td>2021-02-10 07:13:02</td>
+                                            <td>
+                                                <div class="d-flex">
+                                                    <button type="button"
+                                                        class="btn btn-info btn-sm text-white text-nowrap mx-1"
+                                                        data-toggle="modal" data-target="#qrCodeModal"
+                                                        data-id="17">查看二维码</button>
+                                                    <button type="button"
+                                                        class="btn btn-info btn-sm text-white text-nowrap mx-1"
+                                                        data-toggle="modal" data-target="#subscriberModal"
+                                                        data-id="17">订阅人</button>
+                                                    <button type="button"
+                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                        data-toggle="modal" data-target="#deleteModal" data-id="17"
+                                                        data-name='测试111测'>删除</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>18</td>
+                                            <td>测试111测</td>
+                                            <td>123456</td>
+                                            <td>2021-02-10 07:13:02</td>
+                                            <td>
+                                                <div class="d-flex">
+                                                    <button type="button"
+                                                        class="btn btn-info btn-sm text-white text-nowrap mx-1"
+                                                        data-toggle="modal" data-target="#qrCodeModal"
+                                                        data-id="18">查看二维码</button>
+                                                    <button type="button"
+                                                        class="btn btn-info btn-sm text-white text-nowrap mx-1"
+                                                        data-toggle="modal" data-target="#subscriberModal"
+                                                        data-id="18">订阅人</button>
+                                                    <button type="button"
+                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                        data-toggle="modal" data-target="#deleteModal" data-id="18"
+                                                        data-name='测试111测'>删除</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>19</td>
+                                            <td>测试111测</td>
+                                            <td>123456</td>
+                                            <td>2021-02-10 07:13:02</td>
+                                            <td>
+                                                <div class="d-flex">
+                                                    <button type="button"
+                                                        class="btn btn-info btn-sm text-white text-nowrap mx-1"
+                                                        data-toggle="modal" data-target="#qrCodeModal"
+                                                        data-id="19">查看二维码</button>
+                                                    <button type="button"
+                                                        class="btn btn-info btn-sm text-white text-nowrap mx-1"
+                                                        data-toggle="modal" data-target="#subscriberModal"
+                                                        data-id="19">订阅人</button>
+                                                    <button type="button"
+                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                        data-toggle="modal" data-target="#deleteModal" data-id="19"
+                                                        data-name='测试111测'>删除</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>20</td>
+                                            <td>测试111测</td>
+                                            <td>123456</td>
+                                            <td>2021-02-10 07:13:02</td>
+                                            <td>
+                                                <div class="d-flex">
+                                                    <button type="button"
+                                                        class="btn btn-info btn-sm text-white text-nowrap mx-1"
+                                                        data-toggle="modal" data-target="#qrCodeModal"
+                                                        data-id="20">查看二维码</button>
+                                                    <button type="button"
+                                                        class="btn btn-info btn-sm text-white text-nowrap mx-1"
+                                                        data-toggle="modal" data-target="#subscriberModal"
+                                                        data-id="20">订阅人</button>
+                                                    <button type="button"
+                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                        data-toggle="modal" data-target="#deleteModal" data-id="20"
+                                                        data-name='测试111测'>删除</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="modal fade" id="addModal" tabindex="-1" role="dialog"
+                                    aria-labelledby="addModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">新增群组</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <form>
+                                                <div class="modal-body">
+                                                    <div class="form-group row">
+                                                        <label for="newTopicCode"
+                                                            class="col-sm-2 col-form-label text-nowrap">群组编码:</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="text" autocomplete="off" placeholder="请输入群组编码"
+                                                                class="form-control" aria-describedby="titleHelp"
+                                                                name="topicCode" id="newTopicCode" required />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="newTopicName"
+                                                            class="col-sm-2 col-form-label text-nowrap">群组名称:</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="text" autocomplete="off" placeholder="请输入群组名称"
+                                                                class="form-control" aria-describedby="titleHelp"
+                                                                name="topicName" id="newTopicName" required />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-primary">确认</button>
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-dismiss="modal">取消</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal fade" id="qrCodeModal" tabindex="-1" role="dialog"
+                                    aria-labelledby="qrCodeModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">群组二维码</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div
+                                                    class="row justify-content-center flex-column align-items-center my-2">
+                                                    <img src="../../assets/image/showqrcode.jpeg" alt=""
+                                                        style="max-width: 16rem;" />
+                                                    <p class="my-1 text-muted">微信扫一扫，二维码有效期30天</p>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary">生成永久二维码</button>
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-dismiss="modal">取消</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog"
+                                    aria-labelledby="deleteModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">温馨提示</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p class="h6 my-1 text-center">确认删除"<span></span>"群组？</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary">确认</button>
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-dismiss="modal">取消</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal fade" id="subscriberModal" tabindex="-1" role="dialog"
+                                    aria-labelledby="SubscriberModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">订阅人列表</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="table-responsive">
+                                                    <table class="table table-bordered table-hover">
+                                                        <thead class="bg-secondary text-white">
+                                                            <tr>
+                                                                <th>
+                                                                    <p class="text-nowrap my-0">昵称</p>
+                                                                </th>
+                                                                <th>
+                                                                    <p class="text-nowrap my-0">openId</p>
+                                                                </th>
+                                                                <th>
+                                                                    <p class="text-nowrap my-0">操作</p>
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text-nowrap my-0">爱看日剧的陈大人</p>
+                                                                </td>
+                                                                <td>ogIU752IVNLuPwpHkOT2WCFN8a74</td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                                        data-toggle="modal"
+                                                                        data-target="#deleteSubModal"
+                                                                        data-id="ogIU752IVNLuPwpHkOT2WCFN8a74"
+                                                                        data-name='爱看日剧的陈大人'>删除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text-nowrap my-0">爱看日剧的陈大人</p>
+                                                                </td>
+                                                                <td>ogIU752IVNLuPwpHkOT2WCFN8a74</td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                                        data-toggle="modal"
+                                                                        data-target="#deleteSubModal"
+                                                                        data-id="ogIU752IVNLuPwpHkOT2WCFN8a74"
+                                                                        data-name='爱看日剧的陈大人'>删除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text-nowrap my-0">爱看日剧的陈大人</p>
+                                                                </td>
+                                                                <td>ogIU752IVNLuPwpHkOT2WCFN8a74</td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                                        data-toggle="modal"
+                                                                        data-target="#deleteSubModal"
+                                                                        data-id="ogIU752IVNLuPwpHkOT2WCFN8a74"
+                                                                        data-name='爱看日剧的陈大人'>删除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text-nowrap my-0">爱看日剧的陈大人</p>
+                                                                </td>
+                                                                <td>ogIU752IVNLuPwpHkOT2WCFN8a74</td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                                        data-toggle="modal"
+                                                                        data-target="#deleteSubModal"
+                                                                        data-id="ogIU752IVNLuPwpHkOT2WCFN8a74"
+                                                                        data-name='爱看日剧的陈大人'>删除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text-nowrap my-0">爱看日剧的陈大人</p>
+                                                                </td>
+                                                                <td>ogIU752IVNLuPwpHkOT2WCFN8a74</td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                                        data-toggle="modal"
+                                                                        data-target="#deleteSubModal"
+                                                                        data-id="ogIU752IVNLuPwpHkOT2WCFN8a74"
+                                                                        data-name='爱看日剧的陈大人'>删除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text-nowrap my-0">爱看日剧的陈大人</p>
+                                                                </td>
+                                                                <td>ogIU752IVNLuPwpHkOT2WCFN8a74</td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                                        data-toggle="modal"
+                                                                        data-target="#deleteSubModal"
+                                                                        data-id="ogIU752IVNLuPwpHkOT2WCFN8a74"
+                                                                        data-name='爱看日剧的陈大人'>删除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text-nowrap my-0">爱看日剧的陈大人</p>
+                                                                </td>
+                                                                <td>ogIU752IVNLuPwpHkOT2WCFN8a74</td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                                        data-toggle="modal"
+                                                                        data-target="#deleteSubModal"
+                                                                        data-id="ogIU752IVNLuPwpHkOT2WCFN8a74"
+                                                                        data-name='爱看日剧的陈大人'>删除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text-nowrap my-0">爱看日剧的陈大人</p>
+                                                                </td>
+                                                                <td>ogIU752IVNLuPwpHkOT2WCFN8a74</td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                                        data-toggle="modal"
+                                                                        data-target="#deleteSubModal"
+                                                                        data-id="ogIU752IVNLuPwpHkOT2WCFN8a74"
+                                                                        data-name='爱看日剧的陈大人'>删除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text-nowrap my-0">爱看日剧的陈大人</p>
+                                                                </td>
+                                                                <td>ogIU752IVNLuPwpHkOT2WCFN8a74</td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                                        data-toggle="modal"
+                                                                        data-target="#deleteSubModal"
+                                                                        data-id="ogIU752IVNLuPwpHkOT2WCFN8a74"
+                                                                        data-name='爱看日剧的陈大人'>删除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text-nowrap my-0">爱看日剧的陈大人</p>
+                                                                </td>
+                                                                <td>ogIU752IVNLuPwpHkOT2WCFN8a74</td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                                        data-toggle="modal"
+                                                                        data-target="#deleteSubModal"
+                                                                        data-id="ogIU752IVNLuPwpHkOT2WCFN8a74"
+                                                                        data-name='爱看日剧的陈大人'>删除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text-nowrap my-0">爱看日剧的陈大人</p>
+                                                                </td>
+                                                                <td>ogIU752IVNLuPwpHkOT2WCFN8a74</td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                                        data-toggle="modal"
+                                                                        data-target="#deleteSubModal"
+                                                                        data-id="ogIU752IVNLuPwpHkOT2WCFN8a74"
+                                                                        data-name='爱看日剧的陈大人'>删除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text-nowrap my-0">爱看日剧的陈大人</p>
+                                                                </td>
+                                                                <td>ogIU752IVNLuPwpHkOT2WCFN8a74</td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                                        data-toggle="modal"
+                                                                        data-target="#deleteSubModal"
+                                                                        data-id="ogIU752IVNLuPwpHkOT2WCFN8a74"
+                                                                        data-name='爱看日剧的陈大人'>删除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text-nowrap my-0">爱看日剧的陈大人</p>
+                                                                </td>
+                                                                <td>ogIU752IVNLuPwpHkOT2WCFN8a74</td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                                        data-toggle="modal"
+                                                                        data-target="#deleteSubModal"
+                                                                        data-id="ogIU752IVNLuPwpHkOT2WCFN8a74"
+                                                                        data-name='爱看日剧的陈大人'>删除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text-nowrap my-0">爱看日剧的陈大人</p>
+                                                                </td>
+                                                                <td>ogIU752IVNLuPwpHkOT2WCFN8a74</td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                                        data-toggle="modal"
+                                                                        data-target="#deleteSubModal"
+                                                                        data-id="ogIU752IVNLuPwpHkOT2WCFN8a74"
+                                                                        data-name='爱看日剧的陈大人'>删除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text-nowrap my-0">爱看日剧的陈大人</p>
+                                                                </td>
+                                                                <td>ogIU752IVNLuPwpHkOT2WCFN8a74</td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                                        data-toggle="modal"
+                                                                        data-target="#deleteSubModal"
+                                                                        data-id="ogIU752IVNLuPwpHkOT2WCFN8a74"
+                                                                        data-name='爱看日剧的陈大人'>删除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text-nowrap my-0">爱看日剧的陈大人</p>
+                                                                </td>
+                                                                <td>ogIU752IVNLuPwpHkOT2WCFN8a74</td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                                        data-toggle="modal"
+                                                                        data-target="#deleteSubModal"
+                                                                        data-id="ogIU752IVNLuPwpHkOT2WCFN8a74"
+                                                                        data-name='爱看日剧的陈大人'>删除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text-nowrap my-0">爱看日剧的陈大人</p>
+                                                                </td>
+                                                                <td>ogIU752IVNLuPwpHkOT2WCFN8a74</td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                                        data-toggle="modal"
+                                                                        data-target="#deleteSubModal"
+                                                                        data-id="ogIU752IVNLuPwpHkOT2WCFN8a74"
+                                                                        data-name='爱看日剧的陈大人'>删除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text-nowrap my-0">爱看日剧的陈大人</p>
+                                                                </td>
+                                                                <td>ogIU752IVNLuPwpHkOT2WCFN8a74</td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                                        data-toggle="modal"
+                                                                        data-target="#deleteSubModal"
+                                                                        data-id="ogIU752IVNLuPwpHkOT2WCFN8a74"
+                                                                        data-name='爱看日剧的陈大人'>删除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text-nowrap my-0">爱看日剧的陈大人</p>
+                                                                </td>
+                                                                <td>ogIU752IVNLuPwpHkOT2WCFN8a74</td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                                        data-toggle="modal"
+                                                                        data-target="#deleteSubModal"
+                                                                        data-id="ogIU752IVNLuPwpHkOT2WCFN8a74"
+                                                                        data-name='爱看日剧的陈大人'>删除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text-nowrap my-0">爱看日剧的陈大人</p>
+                                                                </td>
+                                                                <td>ogIU752IVNLuPwpHkOT2WCFN8a74</td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                                        data-toggle="modal"
+                                                                        data-target="#deleteSubModal"
+                                                                        data-id="ogIU752IVNLuPwpHkOT2WCFN8a74"
+                                                                        data-name='爱看日剧的陈大人'>删除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text-nowrap my-0">爱看日剧的陈大人</p>
+                                                                </td>
+                                                                <td>ogIU752IVNLuPwpHkOT2WCFN8a74</td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                                        data-toggle="modal"
+                                                                        data-target="#deleteSubModal"
+                                                                        data-id="ogIU752IVNLuPwpHkOT2WCFN8a74"
+                                                                        data-name='爱看日剧的陈大人'>删除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text-nowrap my-0">爱看日剧的陈大人</p>
+                                                                </td>
+                                                                <td>ogIU752IVNLuPwpHkOT2WCFN8a74</td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                                        data-toggle="modal"
+                                                                        data-target="#deleteSubModal"
+                                                                        data-id="ogIU752IVNLuPwpHkOT2WCFN8a74"
+                                                                        data-name='爱看日剧的陈大人'>删除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text-nowrap my-0">爱看日剧的陈大人</p>
+                                                                </td>
+                                                                <td>ogIU752IVNLuPwpHkOT2WCFN8a74</td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                                        data-toggle="modal"
+                                                                        data-target="#deleteSubModal"
+                                                                        data-id="ogIU752IVNLuPwpHkOT2WCFN8a74"
+                                                                        data-name='爱看日剧的陈大人'>删除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text-nowrap my-0">爱看日剧的陈大人</p>
+                                                                </td>
+                                                                <td>ogIU752IVNLuPwpHkOT2WCFN8a74</td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                                        data-toggle="modal"
+                                                                        data-target="#deleteSubModal"
+                                                                        data-id="ogIU752IVNLuPwpHkOT2WCFN8a74"
+                                                                        data-name='爱看日剧的陈大人'>删除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text-nowrap my-0">爱看日剧的陈大人</p>
+                                                                </td>
+                                                                <td>ogIU752IVNLuPwpHkOT2WCFN8a74</td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                                        data-toggle="modal"
+                                                                        data-target="#deleteSubModal"
+                                                                        data-id="ogIU752IVNLuPwpHkOT2WCFN8a74"
+                                                                        data-name='爱看日剧的陈大人'>删除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text-nowrap my-0">爱看日剧的陈大人</p>
+                                                                </td>
+                                                                <td>ogIU752IVNLuPwpHkOT2WCFN8a74</td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                                        data-toggle="modal"
+                                                                        data-target="#deleteSubModal"
+                                                                        data-id="ogIU752IVNLuPwpHkOT2WCFN8a74"
+                                                                        data-name='爱看日剧的陈大人'>删除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text-nowrap my-0">爱看日剧的陈大人</p>
+                                                                </td>
+                                                                <td>ogIU752IVNLuPwpHkOT2WCFN8a74</td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                                        data-toggle="modal"
+                                                                        data-target="#deleteSubModal"
+                                                                        data-id="ogIU752IVNLuPwpHkOT2WCFN8a74"
+                                                                        data-name='爱看日剧的陈大人'>删除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text-nowrap my-0">爱看日剧的陈大人</p>
+                                                                </td>
+                                                                <td>ogIU752IVNLuPwpHkOT2WCFN8a74</td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                                        data-toggle="modal"
+                                                                        data-target="#deleteSubModal"
+                                                                        data-id="ogIU752IVNLuPwpHkOT2WCFN8a74"
+                                                                        data-name='爱看日剧的陈大人'>删除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text-nowrap my-0">爱看日剧的陈大人</p>
+                                                                </td>
+                                                                <td>ogIU752IVNLuPwpHkOT2WCFN8a74</td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                                        data-toggle="modal"
+                                                                        data-target="#deleteSubModal"
+                                                                        data-id="ogIU752IVNLuPwpHkOT2WCFN8a74"
+                                                                        data-name='爱看日剧的陈大人'>删除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text-nowrap my-0">爱看日剧的陈大人</p>
+                                                                </td>
+                                                                <td>ogIU752IVNLuPwpHkOT2WCFN8a74</td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                                        data-toggle="modal"
+                                                                        data-target="#deleteSubModal"
+                                                                        data-id="ogIU752IVNLuPwpHkOT2WCFN8a74"
+                                                                        data-name='爱看日剧的陈大人'>删除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text-nowrap my-0">爱看日剧的陈大人</p>
+                                                                </td>
+                                                                <td>ogIU752IVNLuPwpHkOT2WCFN8a74</td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                                        data-toggle="modal"
+                                                                        data-target="#deleteSubModal"
+                                                                        data-id="ogIU752IVNLuPwpHkOT2WCFN8a74"
+                                                                        data-name='爱看日剧的陈大人'>删除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text-nowrap my-0">爱看日剧的陈大人</p>
+                                                                </td>
+                                                                <td>ogIU752IVNLuPwpHkOT2WCFN8a74</td>
+                                                                <td>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger btn-sm text-white text-nowrap mx-1"
+                                                                        data-toggle="modal"
+                                                                        data-target="#deleteSubModal"
+                                                                        data-id="ogIU752IVNLuPwpHkOT2WCFN8a74"
+                                                                        data-name='爱看日剧的陈大人'>删除</button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="d-flex flex-row-reverse">
+                                                    <ul class="pagination justify-content-end">
+                                                        <li class="page-item disabled">
+                                                            <a class="page-link" href="#" tabindex="-1">上一页</a>
+                                                        </li>
+                                                        {{!-- <li class="page-item"><a class="page-link" href="#">1</a>
+                                                        </li>
+                                                        <li class="page-item active">
+                                                            <a class="page-link" href="#">2 <span
+                                                                    class="sr-only">(current)</span></a>
+                                                        </li>
+                                                        <li class="page-item disable"><a class="page-link"
+                                                                href="javascript:;">...</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">8</a></li>
+                                                        <li class="page-item disable"><a class="page-link"
+                                                                href="javascript:;">...</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">98</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">99</a></li>
+                                                        --}}
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">下一页</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary">确认</button>
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-dismiss="modal">取消</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal fade" id="deleteSubModal" tabindex="-1" role="dialog"
+                                    aria-labelledby="deleteSubModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">温馨提示</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p class="h6 my-1 text-center">确认删除"<span></span>"订阅人？</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary">确认</button>
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-dismiss="modal">取消</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="layoutDefault_footer">
+            <div class="container">
+                <hr class="my-3" />
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <p class="text-center mb-2">
+                            <span>© 2019 - 2021 </span>
+                            <span class="pr-3 pl-3"><a href="http://www.pushplus.plus"
+                                    target="_blank">www.pushplus.plus</a></span>
+                            <span>pushplus &nbsp; 推送加 &nbsp; 开放平台</span>
+                        </p>
+                        <p class="text-center mb-2">
+                            <span>生命不息，开发不止</span>
+                        </p>
+                        <p class="text-center mb-5">
+                            <a href="https://beian.miit.gov.cn/" target="_blank">苏ICP备2021004906号</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

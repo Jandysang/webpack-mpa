@@ -1,0 +1,32 @@
+{
+    "pages": {
+        "home": {
+            "path": "./src/pages/home/index.hbs",
+            "chunks": ["main","home"]
+        },
+        "push1": {
+            "path": "./src/pages/push1/index.hbs",
+            "chunks": ["main","push1"]
+        },
+        "push2": {
+            "path": "./src/pages/push2/index.hbs",
+            "chunks": ["main","push2"]
+        },
+        "demo": {
+            "path": "./src/pages/demo/index.html",
+            "chunks": ["demo"]
+        },
+        "demo2": {
+            "path": "./src/pages/demo2/index.html",
+            "chunks": ["demo2"]
+        }
+    },
+    "handlers": {
+        "main": "./src/handlers/common/main.js",
+        "home": "./src/handlers/home/home.js",
+        "push1": "./src/handlers/push1/index.js",
+        "push2": "./src/handlers/push2/index.js",
+        "demo": "./src/handlers/demo/index.js",
+        "demo2": "./src/handlers/demo2/index.jsx"
+    }
+}
