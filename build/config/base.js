@@ -16,11 +16,26 @@ module.exports = {
     resolve: {
         alias: {
             'vue$': 'vue/dist/vue.esm.js',
-            "~": path.join(__dirname, '../..', 'src')
+            "~": path.join(__dirname, '../..', 'src'),
+            "node_modules": path.join(__dirname, "../..", "node_modules")
         }
     },
     module: {
         rules: [
+            {
+                test: /\.ejs$/,
+                use: [{
+                    loader: 'ejs-loader',
+                    options: {
+                        esModule: false
+                    }
+                }, 'extract-loader', {
+                    loader: 'html-loader',
+                    options: {
+                        attributes: true
+                    }
+                }]
+            },
             {
                 test: /\.hbs$/,
                 use: ['handlebars-loader', 'extract-loader', {
@@ -117,10 +132,10 @@ module.exports = {
                 use: [{
                     loader: 'url-loader',
                     options: {
-                        // 小于 8k 全部压缩
+                        // 小于2k 压缩，大于2k的用文件
                         limit: 1024 * 2,
                         name: '[name]-[hash:16].[ext]',
-                        outputPath: "images"
+                        outputPath: "/images"
                     }
                 }]
             },
@@ -129,8 +144,10 @@ module.exports = {
                 use: [{
                     loader: 'url-loader',
                     options: {
-                        name: '[name].[ext]',
-                        outputPath: "fonts"
+                       // 小于2k 压缩，大于2k的用文件
+                       limit: 1024 * 2,
+                       name: '[name]-[hash:16].[ext]',
+                       outputPath: "/fonts"
                     }
                 }]
             }
@@ -169,6 +186,9 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             filename: 'css/[name]-[hash:16].css',
+        }),
+        new webpack.ProvidePlugin({
+            _: "lodash"
         }),
         new VueLoaderPlugin(),
         new CopyWebpackPlugin({

@@ -19,6 +19,10 @@
         "demo2": {
             "path": "./src/pages/demo2/index.html",
             "chunks": ["demo2"]
+        },
+        "demo3": {
+            "path": "./src/pages/demo3/index.ejs",
+            "chunks": ["main","demo3"]
         }
     },
     "handlers": {
@@ -27,6 +31,7 @@
         "push1": "./src/handlers/push1/index.js",
         "push2": "./src/handlers/push2/index.js",
         "demo": "./src/handlers/demo/index.js",
-        "demo2": "./src/handlers/demo2/index.jsx"
+        "demo2": "./src/handlers/demo2/index.jsx",
+        "demo3": "./src/handlers/demo3/index.js"
     }
 }
