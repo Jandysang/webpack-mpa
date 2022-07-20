@@ -147,7 +147,7 @@ module.exports = {
                         // 小于2k 压缩，大于2k的用文件
                         limit: 1024 * 2,
                         name: '[name]-[hash:16].[ext]',
-                        outputPath: "/fonts"
+                        outputPath: "fonts"
                     }
                 }]
             }
