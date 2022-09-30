@@ -41,7 +41,7 @@
   > 根目录下新建新建‘project.config.json’文件;内容示例如下：
 ```json
     {
-        "pages": { //用于生成页面数枚举
+        "pages": { /* 用于生成页面数枚举 */
             "home": { //将生成‘home.html’的页面
                 "path": "./src/pages/home/index.hbs", //生成'home.html'页面的主入口
                 "chunks": ["common","home"] //当前'home.html'需要用到的脚本（见：handlers的枚举），样式、图片、字体等资源，根据页面或脚本import/src等方式按需导出
