@@ -1,30 +1,31 @@
-pushplus-portal-web<br/>
+# pushplus-portal-web<br/>
 多页面无服务站点解决方案
 
-# 作者
-> sangming12@sina.cn
+## 作者
 
-# 初次创建时间
-> 2021-01-28
+sangming12@sina.cn
 
-# 技术点描述
-> 1、背景
-  >> 现在主流的前端单页面应用，对后端不太友好；
 
-  >> 很多开发习惯于用jQuery、bootstrap或者asp.net等传统开发模式
+## 初次创建时间
 
-  >> 于是为了这个目的，我构建了多页面应用解决方案
+2021-01-28
 
-> 2、解决方案描述
-  >> webpack 4.0
+## 技术点描述
 
-  >> ts-loader（typescript）
+### 1、背景
 
-  >> less-loader （scss、sass、stylus也兼容）
+  * 现在主流的前端单页面应用，对后端不太友好；
+  * 很多开发习惯于用jQuery、bootstrap或者asp.net、python等传统开发模式
+  * 于是为了这个目的，我构建了多页面应用解决方案
 
-  >> handlebars-loader (ejs-loader后期用于扩展node server使用)
+### 2、解决方案描述
 
-# 初始化/快速上手
+  * webpack4
+  * ts-loader（typescript）
+  * less-loader、sass-loader、stylus-loader
+  * handlerbars-loader、ejs-loader
+
+## 初始化/快速上手
 
 ```js
   npm config set registry https://registry.npm.taobao.org
@@ -37,8 +38,10 @@ pushplus-portal-web<br/>
   npm run build
 ```
 
-# 多页面如何配置
-  > 根目录下新建新建‘project.config.json’文件;内容示例如下：
+## 多页面如何配置
+
+  * 根目录下新建新建‘project.config.json’文件;内容示例如下：
+
 ```js
     {
         "pages": { /* 用于生成页面数枚举 */
