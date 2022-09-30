@@ -39,7 +39,7 @@
 
 # 多页面如何配置
   > 根目录下新建新建‘project.config.json’文件;内容示例如下：
-```json
+```js
     {
         "pages": { /* 用于生成页面数枚举 */
             "home": { //将生成‘home.html’的页面
