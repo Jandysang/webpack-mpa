@@ -15,6 +15,7 @@ sangming12@sina.cn
 ### 1、背景
 
   * 现在主流的前端单页面应用，对后端不太友好；
+  * 不太喜欢vue的ssr或generator；
   * 很多开发习惯于用jQuery、bootstrap或者asp.net、python等传统开发模式
   * 于是为了这个目的，我构建了多页面应用解决方案
 
