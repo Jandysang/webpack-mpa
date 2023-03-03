@@ -65,5 +65,6 @@ sangming12@sina.cn
 
 ## 案例
 
-pushplus推送加: https://www.pushplus.plus/.
-shareplus互联网分享平台: https://www.shareplus.plus/.
+pushplus推送加: https://www.pushplus.plus/
+
+shareplus互联网分享平台: https://www.shareplus.plus/
