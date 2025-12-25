@@ -5,6 +5,7 @@ module.exports = {
     mode: "development",
     devtool: "inline-source-map",
     devServer: {
+        overlay: false,
         contentBase: path.resolve(process.cwd(), './dist'),
         proxy:proxyConfig,
         port: 8888,

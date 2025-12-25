@@ -21,7 +21,10 @@ try {
         pages.push(new HtmlWebpackPlugin({
             filename: `${page}.html`,
             template: `${pagePath}`,
-            chunks: config.pages[page]['chunks']
+            chunks: config.pages[page]['chunks'],
+            minify:{
+                removeRedundantAttributes: false,
+            }
         }))
     })
 } catch (e) {
