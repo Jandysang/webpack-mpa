@@ -1,26 +1,70 @@
 {
-    "compilerOptions": {
-      "strictNullChecks": true,
-      "noImplicitAny": true,
-      "module": "CommonJS",
-      "target": "ES5",
-      "allowJs": true,
-      "experimentalDecorators": true,
-      "noImplicitThis": true,
-      "noImplicitReturns": true,
-      "alwaysStrict": true,
-      "inlineSourceMap": true,
-      "inlineSources": true,
-      "noFallthroughCasesInSwitch": true,
-      "noUnusedLocals": true,
-      "noUnusedParameters": true,
-      "strict": true,
-      "removeComments": true,
-      "pretty": true,
-      "strictPropertyInitialization": true,
-      "lib": ["ES2015","dom"],
-      "outDir": "dist",
-      "downlevelIteration": true,
-    }
-  }
-  
+  "compileOnSave": false,
+  "compilerOptions": {
+    /* 基础配置 */
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "rootDir": "./src",
+    "sourceMap": true,
+    "declaration": false,
+    "declarationMap": false,
+    "removeComments": false,
+    "noEmit": true, // 由Webpack/babel处理编译，TS仅做类型检查
+    "importHelpers": true,
+
+    /* 目标环境 */
+    "target": "ES2020", // 兼容现代浏览器，匹配babel-preset-env
+    "module": "ESNext", // 支持ES模块，适配Webpack
+    "moduleResolution": "node", // Node模块解析规则
+    "esModuleInterop": true, // 兼容CommonJS模块（如React/Vue）
+    "allowSyntheticDefaultImports": true, // 支持默认导入（如import Vue from 'vue'）
+
+    /* 类型检查 */
+    "strict": true, // 开启严格模式（推荐）
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "useUnknownInCatchVariables": false, // 降低学习成本，兼容老代码
+    "alwaysStrict": true,
+
+    /* 语法兼容 */
+    "experimentalDecorators": true, // 支持Angular装饰器
+    "emitDecoratorMetadata": true, // Angular元数据发射
+    "downlevelIteration": true, // 兼容低版本循环语法
+    "skipLibCheck": true, // 跳过第三方库类型检查（提升速度）
+    "forceConsistentCasingInFileNames": true, // 强制文件名大小写一致
+
+    /* 路径别名（匹配Webpack alias） */
+    "paths": {
+      "@/*": ["src/*"],
+      "vue$": ["node_modules/vue/dist/vue.esm-bundler.js"],
+      "react": ["node_modules/react"],
+      "react-dom": ["node_modules/react-dom"],
+      "@angular/*": ["node_modules/@angular/*"]
+    },
+
+    /* 库依赖 */
+    "lib": ["ES2020", "DOM", "DOM.Iterable"], // 支持DOM/ES6+ API
+    "types": ["node", "webpack-env", "vue", "react", "react-dom"] // 全局类型声明
+  },
+  /* 包含的文件 */
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "src/**/*.vue", // 支持Vue单文件组件TS
+    "build/**/*.js" // 可选：Webpack配置文件类型检查
+  ],
+  /* 排除的文件 */
+  "exclude": [
+    "node_modules",
+    "dist",
+    "public",
+    "**/*.spec.ts", // 测试文件（如有）
+    "**/*.test.ts"
+  ],
+}

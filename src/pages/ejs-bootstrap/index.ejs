@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <meta name="keywords" content="<%= htmlWebpackPlugin.options.meta.keywords %>">
+  <meta name="description" content="<%= htmlWebpackPlugin.options.meta.description %>">
+  <!-- 引入Bootstrap CSS（最新版） -->
+  <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1>EJS + Bootstrap + jQuery Page</h1>
+    <div class="alert alert-success" id="jquery-demo">
+      点击按钮触发jQuery事件
+    </div>
+    <button class="btn btn-primary" id="btn">点击我</button>
+
+     <%= require('./t2.ejs')() %>
+  </div>
+  <!-- 入口JS会自动注入 -->
+</body>
+</html>
