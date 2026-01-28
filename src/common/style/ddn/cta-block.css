@@ -1,0 +1,141 @@
+.cta-block {
+    position: relative;
+    z-index: 20;
+    overflow: hidden;
+    border-radius: 24px;
+    color: rgb(255 255 255 / .8);
+    padding: 24px 16px
+}
+
+.cta-block .h3,
+.cta-block h3 {
+    color: #fff
+}
+
+.cta-block .line {
+    position: relative;
+    height: 1px;
+    width: 100%;
+    background-color: #d9d9d9;
+    margin: 26px 0
+}
+
+.cta-block .line:after,
+.cta-block .line:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    height: 21px;
+    width: 1px;
+    background-color: #d9d9d9
+}
+
+.cta-block .line:before {
+    left: 10px
+}
+
+.cta-block .line:after {
+    right: 10px
+}
+
+.cta-block p {
+    margin-top: 16px
+}
+
+.cta-block .button,
+.cta-block .media {
+    margin-top: 24px
+}
+
+.cta-block .media img {
+    width: 100%;
+    height: auto
+}
+
+.cta-block .bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1
+}
+
+.cta-block .bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+@media (min-width:768px) {
+    .cta-block {
+        padding: 24px;
+        display: flex;
+        align-items: center
+    }
+
+    .cta-block .media {
+        margin-top: 0;
+        flex-shrink: 0;
+        width: 43%;
+        margin-left: 24px
+    }
+}
+
+@media (min-width:1024px) {
+    .cta-block {
+        padding: 40px
+    }
+
+    .cta-block .media {
+        margin-left: 100px
+    }
+}
+
+@media (min-width:1200px) {
+    .cta-block {
+        padding: 50px;
+        border-radius: 40px;
+        align-items: flex-start
+    }
+
+    .cta-block:not(.wide-image) .media {
+        width: 33.5%;
+        margin-right: 8px
+    }
+
+    .cta-block.wide-image {
+        align-items: center;
+        padding: 80px 60px
+    }
+
+    .cta-block.wide-image .media {
+        width: 47.22%;
+        margin-right: 20px;
+        margin-top: 18px
+    }
+
+    .cta-block .line {
+        margin: 42px 0
+    }
+
+    .cta-block .button,
+    .cta-block p {
+        margin-top: 32px
+    }
+}
+
+@media (min-width:1440px) {
+    .cta-block {
+        padding: 60px
+    }
+
+    .cta-block.wide-image {
+        padding: 100px 80px
+    }
+
+    .cta-block .media {
+        margin-left: 132px
+    }
+}

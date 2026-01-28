@@ -1,0 +1,263 @@
+.contacts-form {
+    max-width: 718px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1a1b1d;
+    border-radius: 24px
+}
+
+.contacts-form .h1,
+.contacts-form .h2,
+.contacts-form .h3,
+.contacts-form .h4,
+.contacts-form .h5,
+.contacts-form .h6,
+.contacts-form h1,
+.contacts-form h2,
+.contacts-form h3,
+.contacts-form h4,
+.contacts-form h5,
+.contacts-form h6 {
+    color: #fff;
+    margin-bottom: 10px
+}
+
+.contacts-form a:not(.button) {
+    text-decoration: underline
+}
+
+.no-touch .contacts-form a:not(.button):hover {
+    text-decoration: none
+}
+
+.pardot-form {
+    font-size: 13px;
+    line-height: 1.45;
+    color: rgb(255 255 255 / .6)
+}
+
+.pardot-form fieldset {
+    width: 100%;
+    margin: 0;
+    border: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 12px
+}
+
+.pardot-form fieldset>div {
+    width: 100%
+}
+
+.pardot-form input[type=email],
+.pardot-form input[type=number],
+.pardot-form input[type=password],
+.pardot-form input[type=tel],
+.pardot-form input[type=text] {
+    height: 58px;
+    border-radius: 50px
+}
+
+.pardot-form input[type=email],
+.pardot-form input[type=number],
+.pardot-form input[type=password],
+.pardot-form input[type=tel],
+.pardot-form input[type=text],
+.pardot-form textarea {
+    border: 1px solid rgb(137 138 138 / .5);
+    background: rgb(255 255 255 / .1);
+    color: rgb(255 255 255 / .7);
+    transition: border-color .5s ease-in-out, background-color .5s ease-in-out
+}
+
+.pardot-form input[type=email]::-webkit-input-placeholder,
+.pardot-form input[type=number]::-webkit-input-placeholder,
+.pardot-form input[type=password]::-webkit-input-placeholder,
+.pardot-form input[type=tel]::-webkit-input-placeholder,
+.pardot-form input[type=text]::-webkit-input-placeholder,
+.pardot-form textarea::-webkit-input-placeholder {
+    color: rgb(255 255 255 / .7)
+}
+
+.pardot-form input[type=email]:-moz-placeholder,
+.pardot-form input[type=email]::-moz-placeholder,
+.pardot-form input[type=number]:-moz-placeholder,
+.pardot-form input[type=number]::-moz-placeholder,
+.pardot-form input[type=password]:-moz-placeholder,
+.pardot-form input[type=password]::-moz-placeholder,
+.pardot-form input[type=tel]:-moz-placeholder,
+.pardot-form input[type=tel]::-moz-placeholder,
+.pardot-form input[type=text]:-moz-placeholder,
+.pardot-form input[type=text]::-moz-placeholder,
+.pardot-form textarea:-moz-placeholder,
+.pardot-form textarea::-moz-placeholder {
+    opacity: 1;
+    color: rgb(255 255 255 / .7)
+}
+
+.pardot-form input[type=email]:-ms-input-placeholder,
+.pardot-form input[type=number]:-ms-input-placeholder,
+.pardot-form input[type=password]:-ms-input-placeholder,
+.pardot-form input[type=tel]:-ms-input-placeholder,
+.pardot-form input[type=text]:-ms-input-placeholder,
+.pardot-form textarea:-ms-input-placeholder {
+    color: rgb(255 255 255 / .7)
+}
+
+.pardot-form input[type=email]:focus,
+.pardot-form input[type=number]:focus,
+.pardot-form input[type=password]:focus,
+.pardot-form input[type=tel]:focus,
+.pardot-form input[type=text]:focus,
+.pardot-form textarea:focus {
+    border-color: #898a8a
+}
+
+.pardot-form textarea {
+    height: 125px;
+    border-radius: 24px;
+    padding-top: 15px
+}
+
+.pardot-form .jcf-select {
+    border: 1px solid rgb(137 138 138 / .5);
+    background: rgb(255 255 255 / .1)
+}
+
+.pardot-form .jcf-select,
+.pardot-form .jcf-select .jcf-select-text {
+    color: rgb(255 255 255 / .7)
+}
+
+.pardot-form .jcf-select.select-error,
+.pardot-form input[type=email].error,
+.pardot-form input[type=number].error,
+.pardot-form input[type=password].error,
+.pardot-form input[type=tel].error,
+.pardot-form input[type=text].error,
+.pardot-form textarea.error {
+    border-color: rgb(240 78 35 / .4);
+    background: rgb(240 78 35 / .1)
+}
+
+.pardot-form .jcf-select-drop {
+    background: #1a1b1d;
+    border: 1px solid rgb(137 138 138 / .5);
+    border-top: 0
+}
+
+.pardot-form .jcf-select-drop-content {
+    background: rgb(255 255 255 / .1);
+    border-radius: 0 0 30px 30px
+}
+
+.pardot-form .jcf-option {
+    color: rgb(255 255 255 / .7)
+}
+
+.pardot-form .jcf-scrollbar-vertical .jcf-scrollbar-slider {
+    background: rgb(255 255 255 / .1)
+}
+
+.pardot-form .select-error .jcf-select {
+    border-color: rgb(240 78 35 / .4);
+    background: rgb(240 78 35 / .1)
+}
+
+.pardot-form .select-error .jcf-select.jcf-drop-active {
+    background: rgb(255 255 255 / .1);
+    border-color: rgb(137 138 138 / .5)
+}
+
+.pardot-form .ca-active li:first-child {
+    display: none
+}
+
+.pardot-form .us-active li:last-child {
+    display: none
+}
+
+.pardot-form__span-2 .h2,
+.pardot-form__span-2 h2 {
+    font-size: 22px;
+    line-height: 1.42;
+    margin-bottom: 12px
+}
+
+.pardot-form__submit button {
+    width: 100%;
+    background-color: #fff;
+    color: #1a1b1d;
+    font-size: 17px;
+    line-height: 1.3;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    padding: 17px 28px;
+    border-radius: 50px;
+    border: 1px solid #fff0;
+    transition: background-color .5s ease-in-out, color .5s ease-in-out, border-color .5s ease-in-out
+}
+
+.pardot-form__submit button svg {
+    display: none
+}
+
+.no-touch .pardot-form__submit button:hover {
+    background-color: #1a1b1d;
+    color: #fff;
+    border-color: #fff
+}
+
+.pardot-form__disabled {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute
+}
+
+.contacts-thanks {
+    text-align: center;
+    color: rgb(255 255 255 / .8)
+}
+
+.contacts-thanks .icon {
+    margin-bottom: 20px
+}
+
+.contacts-thanks .buttons-holder {
+    margin-top: 20px
+}
+
+@media (min-width:768px) {
+    .contacts-form {
+        padding: 40px
+    }
+
+    .pardot-form fieldset>div {
+        width: calc(50% - 6px)
+    }
+
+    .pardot-form fieldset>div.pardot-form__span-2,
+    .pardot-form fieldset>div.pardot-form__submit {
+        width: 100%
+    }
+}
+
+@media (min-width:1200px) {
+    .contacts-form {
+        border-radius: 32px
+    }
+
+    .pardot-form__span-2 .h2,
+    .pardot-form__span-2 h2 {
+        font-size: 24px
+    }
+
+    .contacts-thanks {
+        padding: 0 60px
+    }
+
+    .contacts-thanks .buttons-holder {
+        margin-top: 32px;
+        margin-bottom: 20px
+    }
+}

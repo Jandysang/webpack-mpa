@@ -4,6 +4,7 @@ import $ from 'jquery';
 import 'bootstrap';
 
 import '@/common/style/common.bootstrap.self.scss'
+import './index.self.scss'
 
 // jQuery业务逻辑
 $(document).ready(() => {

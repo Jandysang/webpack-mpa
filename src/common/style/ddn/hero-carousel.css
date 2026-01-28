@@ -1,0 +1,135 @@
+.hero-carousel {
+    position: relative;
+    height: 80vh;
+    overflow: hidden
+}
+
+.hero-carousel__bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1
+}
+
+.hero-carousel__bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute
+}
+
+.hero-carousel__columns {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+    height: 80vh;
+    padding-top: 61px
+}
+
+.hero-carousel__copy {
+    display: grid;
+    gap: 2rem
+}
+
+.hero-carousel__copy .h1 {
+    color: #fff;
+    font-size: 48px;
+    font-weight: 900
+}
+
+.hero-carousel__copy p {
+    color: #fff
+}
+
+.hero-carousel__image {
+    overflow: hidden;
+    border-radius: 3rem
+}
+
+.hero-carousel__image img {
+    transform-origin: center center;
+    transition: all 0.3s
+}
+
+.hero-carousel__image img:hover {
+    transform: scale(1.05)
+}
+
+.hero-carousel__video {
+    width: 100%;
+    height: auto;
+    border-radius: 3rem
+}
+
+.hero-carousel__controller {
+    position: absolute;
+    z-index: 10;
+    bottom: 5rem;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end
+}
+
+.hero-carousel__controls {
+    display: flex;
+    align-items: center
+}
+
+.hero-carousel .slick-dots {
+    margin: 0 1rem;
+    background: #fff;
+    padding: .5rem;
+    border-radius: 1rem;
+    order: 2
+}
+
+.hero-carousel--light .hero-carousel__copy .h1 {
+    color: #d71612;
+    background-image: linear-gradient(90deg, #f04e23, #d71612);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #fff0
+}
+
+.hero-carousel--light .hero-carousel__copy p {
+    color: #1a1b1d;
+    opacity: .8
+}
+
+@media (max-width:767px) {
+    .hero-carousel {
+        overflow: hidden;
+        height: 90vh
+    }
+
+    .hero-carousel__columns {
+        grid-template-columns: unset;
+        gap: 1rem;
+        padding-top: 35px;
+        height: 90vh;
+        align-items: end
+    }
+
+    .hero-carousel__copy {
+        margin-bottom: auto
+    }
+
+    .hero-carousel__image {
+        margin-top: auto
+    }
+
+    .hero-carousel__copy .h1 {
+        font-size: 32px
+    }
+
+    .hero-carousel__copy p {
+        display: none
+    }
+
+    .hero-carousel__controller {
+        display: none
+    }
+}

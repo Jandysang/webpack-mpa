@@ -1,0 +1,80 @@
+.two-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px
+}
+
+.two-columns .column {
+    width: 100%
+}
+
+.two-columns.reverse {
+    flex-direction: row-reverse
+}
+
+.two-columns .info-content .h2,
+.two-columns .info-content h2 {
+    margin-bottom: 15px
+}
+
+.two-columns .info-content p:not(:last-child) {
+    margin-bottom: 15px
+}
+
+.two-columns .info-list {
+    font-size: 15px;
+    line-height: 1.45
+}
+
+.two-columns .info-list li+li {
+    margin-top: 30px
+}
+
+.two-columns .info-list .title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px
+}
+
+.two-columns .info-list .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px
+}
+
+.two-columns .info-list .icon img {
+    max-height: 100%
+}
+
+@media (min-width:768px) {
+    .two-columns {
+        flex-wrap: nowrap;
+        justify-content: space-between
+    }
+
+    .two-columns .column:first-child {
+        width: 50%
+    }
+
+    .two-columns .column:last-child {
+        width: 46%
+    }
+}
+
+@media (min-width:1200px) {
+    .two-columns {
+        gap: 66px
+    }
+
+    .two-columns .info-content .h2,
+    .two-columns .info-content h2 {
+        margin-bottom: 24px
+    }
+
+    .two-columns .info-content p:not(:last-child) {
+        margin-bottom: 20px
+    }
+}

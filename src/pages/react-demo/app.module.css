@@ -1,0 +1,27 @@
+/* app.module.css */
+.container {
+  padding: 20px;
+}
+
+.title {
+  color: blue;
+}
+
+.container__title--abcde {
+  font-size: 24px;
+}
+.container_a {
+    color: red;
+}
+.container-b {
+    color: blue;
+}
+.container-c {
+    color: green;
+}
+.container-d {
+    color: yellow;
+}
+.container-e {
+    color: orange;
+}

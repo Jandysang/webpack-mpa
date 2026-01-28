@@ -1,0 +1,135 @@
+@font-face {
+    font-display: swap;
+    font-family: 'wpdm-icons';
+    src: url(@/assets/fonts/common/wpdm-icons.eot?9713993);
+    src: url('@/assets/fonts/common/wpdm-icons.eot?9713993#iefix') format('embedded-opentype'), 
+        url(@/assets/fonts/common/wpdm-icons.woff2?9713993) format('woff2'), 
+        url(@/assets/fonts/common/wpdm-icons.woff?9713993) format('woff'), 
+        url(@/assets/fonts/common/wpdm-icons.ttf?9713993) format('truetype'), 
+        url('@/assets/fonts/common/wpdm-icons.svg?9713993#wpdm-icons') format('svg');
+    font-weight: 400;
+    font-style: normal
+}
+
+[class^="wpdm-"]:before,
+[class*=" wpdm-"]:before {
+    font-family: "wpdm-icons";
+    font-style: normal;
+    font-weight: 400;
+    speak: never;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.wpdm-shopping-cart:before {
+    content: '\e800'
+}
+
+.wpdm-circle-notch:before {
+    content: '\e801'
+}
+
+.wpdm-spinner:before {
+    content: '\e802'
+}
+
+.wpdm-sun:before {
+    content: '\e803'
+}
+
+.wpdm-edit:before {
+    content: '\e804'
+}
+
+.wpdm-eye:before {
+    content: '\e805'
+}
+
+.wpdm-share:before {
+    content: '\e806'
+}
+
+.wpdm-trash:before {
+    content: '\e807'
+}
+
+.wpdm-hdd:before {
+    content: '\e808'
+}
+
+.wpdm-layer-group:before {
+    content: '\e809'
+}
+
+.wpdm-paper-plane:before {
+    content: '\e80a'
+}
+
+.wpdm-arrow-down:before {
+    content: '\e80b'
+}
+
+.wpdm-chat:before {
+    content: '\e80c'
+}
+
+.wpdm-file-arrow-down:before {
+    content: '\e80e'
+}
+
+.wpdm-pause:before {
+    content: '\e812'
+}
+
+.wpdm-play:before {
+    content: '\e813'
+}
+
+.wpdm-stop:before {
+    content: '\e815'
+}
+
+.wpdm-user:before {
+    content: '\e817'
+}
+
+.wpdm-cart-arrow-down:before {
+    content: '\e818'
+}
+
+.wpdm-credit-card:before {
+    content: '\e819'
+}
+
+.wpdm-parachute-box:before {
+    content: '\e81a'
+}
+
+.wpdm-crown:before {
+    content: '\e81b'
+}
+
+.wpdm-logout:before {
+    content: '\e81c'
+}
+
+.wpdm-user-edit:before {
+    content: '\e81d'
+}
+
+.wpdm-circle-down:before {
+    content: '\e81e'
+}
+
+.wpdm-envelope-open:before {
+    content: '\f2b6'
+}

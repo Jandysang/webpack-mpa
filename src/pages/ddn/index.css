@@ -1,0 +1,64 @@
+.testimonial-big__grid {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+    gap: 4rem
+}
+
+.testimonial-big__image {
+    margin-bottom: 1rem;
+    position: relative
+}
+
+.testimonial-big__author {
+    text-align: center
+}
+
+.testimonial-big__name {
+    font-weight: 600;
+    color: #1a1b1d
+}
+
+.testimonial-big__title {
+    font-size: 1rem
+}
+
+.testimonial-big__quote {
+    padding: 4rem;
+    border-radius: 2rem;
+    background-color: #f3f3f3
+}
+
+.testimonial-big__quote::before {
+    display: none
+}
+
+.testimonial-big__quote p {
+    font-size: 2rem
+}
+
+.testimonial-big__label {
+    font: 1rem / 1.4 "Roboto Mono", monospace;
+    opacity: .8;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem
+}
+
+.testimonial-big__label::before {
+    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"><path d="M113.51 100.6 88.28 55.97C32.35 87.58 24 123.13 24 141.51v102.53h102.53V141.51H75.26c0-8.9 10.02-24.96 38.25-40.91zm111.23 40.91c0-8.9 10.02-24.96 38.24-40.91l-25.22-44.63c-55.93 31.61-64.28 67.16-64.28 85.54v102.53H276V141.51h-51.26z" fill="%231A1B1D"></path></svg>');
+    width: 1.5rem;
+    opacity: .6;
+    display: block;
+    margin-right: .5rem
+}
+
+
+
+.test-image {
+    background-image: url(@/assets/image/common/checkin-header.png);
+    height: 10vh;
+    width: 20vw;
+    background-size: contain;
+}
+

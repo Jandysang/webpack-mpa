@@ -1,0 +1,141 @@
+#license-active-form {
+    width: 300px;
+    margin-right: 100px
+}
+
+.form-item {
+    vertical-align: middle
+}
+
+#license-form-wrapper {
+    margin-top: 20px
+}
+
+#license-result {
+    border: 1px solid #CCC;
+    padding: 10px 20px 10px 10px;
+    width: 400px;
+    height: auto;
+    float: left;
+    margin-right: 50px;
+    margin-top: 24px
+}
+
+#license-result h2 {
+    font-size: 18px !important;
+    line-height: inherit !important
+}
+
+#license-result #ddn-title {
+    height: 48px
+}
+
+#license-result .error {
+    width: 278px;
+    border: none;
+    overflow: hidden;
+    position: relative;
+    background: none;
+    margin-left: -13px;
+    margin-top: 0
+}
+
+#license-result .ddn-error-text h2 {
+    display: inline;
+    border: none
+}
+
+#license-result .ddn-error-text h2 img {
+    float: left;
+    display: inline
+}
+
+#license-result .error ul li {
+    margin-left: 0
+}
+
+.ddn-success-text {
+    padding-bottom: 10px;
+    border: #ooo solid 1px
+}
+
+#license-result .ddn-success-text h2 {
+    display: inline;
+    border: none
+}
+
+#license-result .ddn-success-text h2 img {
+    float: left;
+    display: inline
+}
+
+.ddn-license-item {
+    margin-left: 55px
+}
+
+#license-form {
+    float: left
+}
+
+.activatiomessg {
+    float: left;
+    width: 400px;
+    font-size: 12px;
+    text-align: justify
+}
+
+.activatiomessg p {
+    font-size: 12px;
+    text-align: justify
+}
+
+.activatiomessg pre {
+    font-size: 12px
+}
+
+h1#activation-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-top: 50px;
+    padding-left: 112px
+}
+
+.ddn-title {
+    font-weight: 700
+}
+
+.ddn-featurename {
+    font-weight: 700;
+    font-size: 14px
+}
+
+#saveAndPrint {
+    float: right
+}
+
+.licenceastric span {
+    color: red;
+    margin-top: 1em
+}
+
+#license-form #edit-submit {
+    margin: 1em;
+    float: right;
+    background-color: #8f0000;
+    color: #fff;
+    font-weight: 700
+}
+
+#license-form .marker,
+.form-required {
+    visibility: hidden
+}
+
+.developBlock {
+    padding-top: 25px
+}
+
+.activatiomessg p.activateP {
+    padding: 5px 0 8px 0;
+    line-height: 0
+}

@@ -1,0 +1,94 @@
+.logos-list-wrap {
+        margin-bottom: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+      }
+      .logos-list-wrap .sub-title {
+        color: #747474;
+        font-size: 20px;
+        line-height: 1.42;
+        flex-shrink: 0;
+      }
+      .logos-list-wrap .logos-list {
+        display: flex;
+        gap: 12px;
+        overflow-x: auto;
+        position: relative;
+        z-index: 10;
+        margin: 0 -20px;
+        padding: 2px 20px;
+        scrollbar-width: none;
+      }
+      .logos-list-wrap .logos-list li {
+        flex: 0 0 auto;
+        height: 54px;
+        display: flex;
+        padding: 11px 18px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100px;
+        border: 1px solid #fff0;
+        box-shadow: 0 2px 2px 0 rgb(0 0 0 / 0.04), 0 0 0 1px rgb(0 0 0 / 0.08);
+        transition: border-color 0.5s ease-in-out;
+      }
+      .logos-list-wrap .logos-list li a {
+        line-height: 1;
+      }
+      .logos-list-wrap .logos-list img {
+        max-width: 124px;
+        max-height: 30px;
+        object-fit: contain;
+      }
+      .logos-list-wrap .logos-list.has-animation {
+        transition-delay: 0.3s;
+      }
+      .logos-list--alt .logos-list-wrap {
+        margin-top: -2rem;
+        margin-bottom: 0;
+      }
+      .logos-list--alt .logos-list-wrap .logos-list {
+        margin: 0;
+      }
+      .logos-list--alt .logos-list-wrap .logos-list li {
+        background-color: #fff;
+      }
+      @media (min-width: 768px) {
+        .logos-list-wrap .logos-list {
+          margin: 0 -46px;
+          padding-left: 46px;
+          padding-right: 46px;
+        }
+      }
+      @media (min-width: 1024px) {
+        .logos-list-wrap {
+          width: 100%;
+          flex-wrap: nowrap;
+          align-items: center;
+          flex-grow: 1;
+          gap: 40px;
+        }
+        .logos-list-wrap .logos-list {
+          margin: 0 -46px 0 0;
+          padding-left: 2px;
+          padding-right: 2px;
+          flex-grow: 1;
+        }
+      }
+      @media (min-width: 1200px) {
+        .logos-list-wrap {
+          margin-bottom: 50px;
+          gap: 80px;
+        }
+        .logos-list--alt .logos-list-wrap .logos-list {
+          justify-content: center;
+        }
+      }
+      @media (min-width: 1440px) {
+        .logos-list-wrap {
+          margin-bottom: 60px;
+        }
+        .logos-list-wrap .logos-list {
+          margin: 0;
+        }
+      }

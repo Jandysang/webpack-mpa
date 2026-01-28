@@ -1,0 +1,81 @@
+.customer-content .container {
+			max-width: 1200px;
+			margin: 0 auto;
+			position: relative;
+			z-index: 1
+		}
+
+		.customer-content h1,
+		.customer-content h2 {
+			font-size: 3rem
+		}
+
+		.customer-content h2 {
+			margin-bottom: 3rem;
+			font-size: 2.5rem
+		}
+
+		.customer-content p {
+			font-size: 1rem;
+			color: #1a1b1d;
+			margin-bottom: 1rem;
+			line-height: 1.4
+		}
+
+		.customer-content p:last-child {
+			margin-bottom: 0
+		}
+
+		.customer-content .button {
+			font-family: "Roboto Mono", monospace;
+			font-weight: 500;
+			background-color: #1a1b1d;
+			color: #fff;
+			font-size: 1rem;
+			text-wrap: balance;
+			text-align: center;
+			line-height: 1.1;
+			border-radius: 3rem;
+			padding: 1rem 2rem;
+			-webkit-transition: background-color 0.5s ease-in-out;
+			transition: background-color 0.5s ease-in-out;
+			margin-top: auto;
+			align-self: flex-start
+		}
+
+		.customer-content .button:hover {
+			background-color: #898a8a
+		}
+
+		@media (max-width:1799px) {
+
+			.page-template-page-customers .customer-points,
+			.page-template-page-customers .customer-card {
+				padding-inline: 66px
+			}
+		}
+
+		@media (max-width:1399px) {
+
+			.page-template-page-customers .customer-points,
+			.page-template-page-customers .customer-card {
+				padding-inline: 46px
+			}
+		}
+
+		@media (max-width:1199px) {
+
+			.customer-content h1,
+			.customer-content h2 {
+				font-size: 2rem;
+				margin-bottom: 2rem
+			}
+		}
+
+		@media (max-width:767px) {
+
+			.page-template-page-customers .customer-points,
+			.page-template-page-customers .customer-card {
+				padding-inline: 20px
+			}
+		}

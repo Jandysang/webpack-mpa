@@ -1,0 +1,46 @@
+    <script type="html/template" id="v-template-hero-carousel-template">
+          <div class="hero-carousel hero-carousel--light">
+            <div class="hero-carousel__bg">
+              <img fetchpriority="low" decoding="async" width="1920" height="1081"
+                src="{{%= imageHomePage1 %}}" class="attachment-full size-full" alt=""
+                srcset="
+                {{%= imageHomePage1 %}}          1920w,
+                {{%= imageHomePage2 %}}   300w,
+                {{%= imageHomePage3 %}} 1024w,
+                {{%= imageHomePage4 %}}   768w,
+                {{%= imageHomePage5 %}} 1536w
+              " sizes="(max-width: 1920px) 100vw, 1920px" loading="lazy" />
+            </div>
+
+            <div class="hero-carousel__slides">
+                {{% list.forEach(function(item){ %}}
+              <div class="hero-carousel__slide">
+                <div class="hero-carousel__content">
+                  <div class="container">
+                    <div class="hero-carousel__columns">
+                      <a href="/ddncustomerdetail1.html?id={{%= item.id %}}"
+                        target="_self" class="hero-carousel__image" title="{{%= item.title && item.title.length ? item.title : '---' %}}">
+                        <img decoding="async" width="1024" height="537"
+                          src="{{%- item.abstractImg %}}"  class="attachment-large size-large" alt=""  />
+                      </a>
+
+                      <div class="hero-carousel__copy">
+                        <div class="h1">
+                          <div class="h1">{{%= item.title && item.title.length ? item.title : '---' %}}</div>
+                        </div>
+                        <a href="/pressreleases.html?d=googlecloudlaunchesgeneralavailabilityofmanagedlustrepoweredbyddnsexascalertechnology"
+                          target="_self" class="button small black"
+                          title="{{%= item.title && item.title.length ? item.title : '---' %}}"><span>了解更多</span><i><i></i></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+             {{% }) %}}
+            </div>
+
+            <div class="container hero-carousel__controller">
+              <div class="hero-carousel__controls"></div>
+            </div>
+          </div>
+        </script>

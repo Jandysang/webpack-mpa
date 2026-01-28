@@ -1,13 +1,11 @@
 {
+  "extends": "@tsconfig/recommended/tsconfig.json",
   "compileOnSave": false,
   "compilerOptions": {
+    "jsx": "preserve",
+    "jsxImportSource": "vue",
+    "jsxFactory": "h",
     /* 基础配置 */
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
-    "rootDir": "./src",
-    "sourceMap": true,
-    "declaration": false,
-    "declarationMap": false,
     "removeComments": false,
     "noEmit": true, // 由Webpack/babel处理编译，TS仅做类型检查
     "importHelpers": true,
@@ -51,14 +49,7 @@
     "types": ["node", "webpack-env", "vue", "react", "react-dom"] // 全局类型声明
   },
   /* 包含的文件 */
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.js",
-    "src/**/*.jsx",
-    "src/**/*.vue", // 支持Vue单文件组件TS
-    "build/**/*.js" // 可选：Webpack配置文件类型检查
-  ],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "src/**/*.d.ts", "types/**/*.d.ts", "src/pages/react-ts-demo/index.react.jsx"],
   /* 排除的文件 */
   "exclude": [
     "node_modules",
@@ -66,5 +57,5 @@
     "public",
     "**/*.spec.ts", // 测试文件（如有）
     "**/*.test.ts"
-  ],
+  ]
 }

@@ -1,0 +1,111 @@
+.contact-section {
+    position: relative;
+    z-index: 20;
+    overflow: hidden
+}
+
+.contact-section .section-bg {
+    position: absolute;
+    height: 327px;
+    left: 0;
+    bottom: -80px;
+    width: 100%;
+    z-index: -1
+}
+
+.contact-section .section-bg img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom
+}
+
+.contact-block {
+    border-radius: 24px;
+    text-align: center;
+    padding: 30px 20px;
+    color: rgb(255 255 255 / .8);
+    background-color: #1a1b1d;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat
+}
+
+.contact-block .h2,
+.contact-block h2 {
+    color: #fff;
+    margin-bottom: 20px
+}
+
+.contact-block .button {
+    margin-top: 32px
+}
+
+.contact-block .link-holder {
+    margin-top: 24px
+}
+
+.contact-block .link-holder a {
+    font-size: 15px;
+    line-height: 1.45;
+    font-weight: 600;
+    text-decoration: underline;
+    color: #fff
+}
+
+.no-touch .contact-block .link-holder a:hover {
+    text-decoration: none
+}
+
+.contact-block .avatars-list {
+    margin: 0 auto 20px
+}
+
+@media (min-width:1024px) {
+    .contact-section .container {
+        max-width: 788px;
+        padding: 0;
+        width: 100%;
+        margin: 0 auto
+    }
+
+    .contact-block {
+        padding: 100px 169px;
+        border-radius: 40px
+    }
+
+    .contact-block.with-avatars {
+        padding: 100px 144px
+    }
+}
+
+@media (min-width:1200px) {
+    .contact-section .section-bg {
+        top: 140px;
+        height: auto
+    }
+
+    .contact-block .h2,
+    .contact-block h2 {
+        margin-bottom: 32px
+    }
+
+    .contact-block .avatars-list {
+        margin-bottom: 30px
+    }
+}
+
+@media (min-width:1440px) {
+    .contact-section .section-bg {
+        top: 180px
+    }
+}
+
+@media (min-width:2200px) {
+    .contact-section .section-bg {
+        bottom: -140px
+    }
+}

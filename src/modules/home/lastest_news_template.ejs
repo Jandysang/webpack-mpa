@@ -1,0 +1,22 @@
+<script type="html/template" id="v-template-lastest-news-template">
+  {{% list.forEach(function(item){ %}}
+    <a href="/ddncustomerdetail2.html?id={{%= item.id %}}" class="latest-news__card" title="{{%= item.title && item.title.length ? item.title : '---' %}}">
+                  <div class="latest-news__img">
+                    <img loading="lazy" decoding="async" width="1200" height="628"
+                      src="{{%- item.abstractImg %}}" class="attachment-full size-full"  sizes="auto, (max-width: 1200px) 100vw, 1200px" fetchpriority="low" />
+                  </div>
+                  <div class="latest-news__copy">
+                    <div class="latest-news__title">{{%= item.title && item.title.length ? item.title : '---' %}}</div>
+                    <div class="latest-news__meta">
+                      <div class="latest-news__date">{{%= item.validStartTime %}}</div>
+                      <div class="latest-news__link">
+                        了解更多 <span class="small-plus"><span></span></span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+  {{% }) %}}
+</script>
+
+
+

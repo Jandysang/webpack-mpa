@@ -1,164 +1,309 @@
+# Webpack 5 多框架多页面构建系统
 
-# Webpack5 多框架多页面项目说明
+基于 Webpack 5 的现代化前端项目构建系统，支持多种框架的多页面开发，可根据不同页面需求选择合适的开发方式。
 
-## 一、项目简介
-本项目基于 **Webpack5** 搭建，支持 **Vue3、React、AngularJS** 多框架共存，采用 **「约定优于配置」** 设计，实现：
-- 不同框架代码 & 样式隔离  
-- 兼容 SCSS / LESS / Stylus 预处理器  
-- 多页面自动构建（遍历 `src/pages` 生成入口和 HTML）  
-- 静态构建 + Runtime 动态修改 HTML（比 SSR 简单、速度快、SEO 友好）  
+## 特性
 
-> **适用场景**：复杂多页面应用、需要兼容低版本浏览器 + 高性能交互并存的项目。
+- ✅ **多页面应用**：自动生成多页面入口
+- ✅ **多框架支持**：EJS + jQuery、Vue 3、React
+- ✅ **SEO 优化**：EJS 页面天然支持 SEO
+- ✅ **开发效率**：Vue/React 提供高效开发体验
+- ✅ **现代构建优化**：代码分割、压缩优化
+- ✅ **环境变量管理**：灵活的环境配置
+- ✅ **热更新开发**：提升开发体验
+- ✅ **CSS 预处理器**：支持 SCSS、LESS、Stylus
 
----
+## 环境与依赖
+- **Node.js 版本**: `>=20.0.0`
+- **npm 版本**: `>=8.0.0`
+- **webpack 版本**: `>=5.100.0`
 
-## 二、核心特性
-- ✅ 多框架支持：Vue3（JSX / SFC）、React18（JSX）、AngularJS 共存  
-- ✅ 样式隔离：全局样式加 `.self` 后缀，Vue 组件用 `scoped`  
-- ✅ 预处理器：SCSS / LESS / Stylus 自动编译  
-- ✅ 多页面自动构建：新增页面无需改 Webpack 配置  
-- ✅ 模板引擎：**EJS**（编译期）+ 可选 **Handlebars**（运行时）  
-- ✅ 生产优化：代码分割、缓存、资源哈希、样式提取  
+## 安装依赖
 
----
-
-## 三、目录结构（核心）
-
-```plaintext
-project-root/
-├── src/
-│   ├── assets/          # 全局静态资源（图片、字体等）
-│   ├── common/          # 通用代码（工具函数、全局样式）
-│   │   ├── style/       # 全局样式（需加 .self 后缀）
-│   │   │   ├── common.self.scss  # 全局SCSS样式
-│   │   │   └── reset.self.less   # 全局LESS样式
-│   ├── pages/           # 多页面目录（核心）
-│   │   ├── vue3/        # Vue3页面示例
-│   │   │   ├── App.vue  # Vue单文件组件
-│   │   │   ├── index.vue.js      # Vue入口文件（.vue.js后缀标识）
-│   │   │   └── index.html        # 页面模板（EJS语法）
-│   │   ├── react/       # React页面示例
-│   │   │   ├── App.react.jsx     # React组件（.react.jsx后缀标识）
-│   │   │   ├── index.react.js    # React入口文件（.react.js后缀标识）
-│   │   │   └── index.html        # 页面模板（EJS语法）
-│   │   ├── ejs-angular/    # AngularJS+EJS页面示例（替换原hbs目录）
-│   │   │   ├── index.js          # 通用入口文件
-│   │   │   └── index.ejs         # EJS模板文件（替代原hbs模板）
-│   ├── utils/           # 工具函数目录
-├── webpack.config.js    # Webpack核心配置文件
-├── package.json         # 依赖配置
-├── postcss.config.js    # PostCSS配置（自动前缀等）
-└── README.md            # 项目说明文档
+```bash
+npm install
 ```
 
-## 四、快速开始
+## 开发模式
 
-### 1. 环境
-- Node.js：v18+（推荐 v18.18.0 及以上，避免依赖安装失败）
-- npm：v8+ 或 yarn：v1.22+
+```bash
+# 启动开发服务器
+npm run dev
 
-```shell
-  npm install
-  npm run dev   # 启动开发服务器
-  npm run build # 生产打包
+# 或指定环境
+NODE_ENV=development npm run dev
 ```
-### 2. 访问路径
-- Vue3 页面 → `http://localhost:8080/vue3/`  
-- React 页面 → `http://localhost:8080/react/`  
-- AngularJS 页面 → `http://localhost:8080/ejs-angular/`
 
----
+开发服务器特性：
+- 端口：8080
+- 热更新：开启
+- 源码映射：cheap-module-source-map
 
-## 五、开发约定（必看）
-### 入口文件命名
-Webpack 自动找入口（优先级）：
-1. `index.js`（通用）  
-2. `index.react.js`（React）  
-3. `index.vue.js`（Vue3）
+## 构建生产版本
 
-### 组件文件命名
-- Vue 单文件组件 → `.vue`  
-- Vue JSX 组件 → `.vue.jsx`  
-- React 组件 → `.react.jsx`  
-- AngularJS → 写在 `index.js`  
-- 模板 → 统一 `.ejs`（可内嵌 EJS 语法）
+```bash
+# 构建生产版本
+npm run build
 
-### 样式文件
-- 全局样式 → 加 `.self` 后缀（`common.self.scss`）  
-- Vue 组件样式 → 用 `scoped`，不加 `.self`
+# 或指定环境
+NODE_ENV=production npm run build
+```
 
----
+## 开发策略选择指南
 
-## 六、新增页面示例
-### React 页面
-1. `src/pages/react-demo/index.react.js`（入口）  
-2. `App.react.jsx`（组件）  
-3. `index.html`（EJS 模板，含挂载点）  
-访问：`http://localhost:8080/react-demo/`
+### 1. SEO 关键页面 → EJS + jQuery
 
-### Vue3 页面
-1. `src/pages/vue-demo/index.vue.js`（入口）  
-2. `App.vue`（SFC）  
-3. `index.html`（EJS 模板）  
-访问：`http://localhost:8080/vue-demo/`
+适用于需要 SEO 且用于引流的关键页面：
 
-> 无需改 Webpack 配置，按目录和命名约定即可自动构建。
+```
+src/
+└── pages/
+    ├── home/              # 首页（SEO 重要）
+    │   ├── index.ejs      # EJS 模板（SSG 效果）
+    │   ├── index.js       # jQuery 逻辑
+    │   └── styles.scss    # 样式
+    └── about/             # 关于我们（SEO 重要）
+        ├── index.ejs
+        ├── index.js
+        └── styles.less
+```
 
----
+**优势**：
+- 天然支持 SEO，内容在构建时生成
+- 静态页面，加载速度快
+- 适合搜索引擎抓取
 
-## 七、样式与预处理器
-- 全局样式在 `common/style`，引入时带 `.self` 后缀  
-- Vue 组件内样式用 `scoped`，可用 `@use` 引入全局变量  
-- 预处理器按文件后缀自动匹配 loader（SCSS / LESS / Stylus）
+### 2. 高效开发页面 → Vue 3/React SPA
 
----
+适用于内部功能页面，注重开发效率：
 
-## 八、模板引擎选择
-- **编译期**：统一用 **EJS**（简单、JS 语法、零配置子模板、多框架友好）  
-- **放弃 handlebars-loader 原因**：配置复杂、与 Webpack5/多框架冲突、热更新差  
-- **运行时**：仍可在业务代码里引入 Handlebars 做动态渲染（如 AJAX 返回模板字符串）
+```
+src/
+└── pages/
+    ├── dashboard/         # 仪表盘（开发效率重要）
+    │   ├── index.vue      # Vue 单文件组件
+    │   └── main.js        # Vue 入口
+    └── admin/             # 管理后台（开发效率重要）
+        ├── index.react.tsx # React 组件
+        └── main.tsx       # React 入口
+```
 
----
+**优势**：
+- 响应式数据绑定，开发效率高
+- 组件化开发，易于维护
+- 丰富的生态系统
 
-## 九、静态构建 + Runtime 动态修改 HTML
-本方案特点：
-- 构建时生成完整 HTML（SEO 友好）  
-- 运行时用 JS（jQuery / Vue / React / Angular / EJS / Handlebars）修改 DOM  
-- 比 SSR 简单、部署成本低、首屏快  
-- 适合：首屏直出 + 后续交互复杂的场景
+## 框架支持详情
 
----
+### EJS + jQuery（SSG 类似效果）
 
-## 十、如果全用 Vue 做多页面？
-可考虑 **Vite + Vue3 的 SSG（静态站点生成）** 方案：
-- 文档参考：[Vite 官方 SSG 指南](https://vitejs.dev/guide/ssr.html#ssg)  
-- Vue 专用 SSG 方案：[Vitesse](https://github.com/vuejs/vitesse)（社区模板，支持多页面/SSG）
+- **文件扩展名**：`.ejs` 模板文件 + `.js` 逻辑文件
+- **SEO 优势**：内容在构建时生成，天然 SEO 友好
+- **性能特点**：首屏加载快，适合营销页面
 
----
+### Vue 3 SPA
 
-## 十一、React / Angular 的 SSG 方案
-- **React**：  
-  - Next.js（支持 SSG/ISR）[官网](https://nextjs.org/docs/basic-features/data-fetching/static-site-generation)  
-  - Gatsby [官网](https://www.gatsbyjs.com/docs/)
-- **Angular**：  
-  - Angular Universal（支持 SSG）[官网](https://angular.io/guide/universal)  
-  - Scully（Angular 专用 SSG）[官网](https://scully.io/)
+- **文件扩展名**：`.vue` 单文件组件、`.tsx` Vue JSX
+- **开发体验**：响应式数据绑定，组件化开发
+- **适用场景**：管理系统、后台界面
 
----
+### React SPA
 
-## 十二、常见问题速查
-| 问题 | 解决 |
-|------|------|
-| Vue 样式污染 | 加 `scoped`，全局样式加 `.self` |
-| React 报 React is not defined | 用 `.react.jsx` 后缀，Webpack 会自动引入 React |
-| EJS 变量未渲染 | 检查 `html-webpack-plugin` 的 `templateParameters` |
-| 生产打包页面空白 | 检查 `chunks` 配置和资源路径 |
+- **文件扩展名**：`.react.jsx`、`.react.tsx`
+- **生态系统**：丰富的第三方库
+- **适用场景**：复杂交互应用、组件库
 
----
+## 项目约定
 
-## 十三、总结
-- 本项目 = **Webpack5 多框架多页面 + EJS 编译期模板 + Runtime 动态渲染**  
-- 静态构建保证 SEO 与首屏速度，Runtime 动态渲染满足复杂交互  
-- 放弃 handlebars-loader 因 EJS 更简单、适配多框架更好  
-- 全 Vue 多页面可考虑 Vite + SSG；React/Angular 也有成熟 SSG 方案  
-- 遵循命名约定即可零配置扩展页面，维护成本低
+### 入口文件命名规则
+
+- **EJS 页面**：[index.ejs] + [index.js/index.ts]
+- **Vue 页面**：[index.html/index.ejs]+ [index.js/index.jsx/index.ts/index.tsx]
+- **React 页面**：[index.html/index.ejs]+[index.react.js/index.react.jsx/index.react.tsx/index.react.ts]
+
+### 页面目录结构示例
+
+```
+src/
+└── pages/
+    ├── landing/           # 营销页面（SEO 重要 → EJS+jQuery）
+    │   ├── index.ejs      # EJS 模板
+    │   ├── index.js       # 业务逻辑
+    │   └── styles.scss    # 样式
+    ├── dashboard/         # 仪表盘（开发效率重要 → Vue）
+    │   ├── index.vue      # Vue 组件
+    │   └── main.js        # Vue 入口
+    └── admin/             # 管理后台（开发效率重要 → React）
+        ├── index.react.tsx # React 组件
+        └── main.tsx       # React 入口
+```
+
+## 框架选择最佳实践
+
+### SEO 关键页面（使用 EJS + jQuery）
+
+当页面需要：
+- 良好的搜索引擎排名
+- 快速的首屏加载
+- 静态内容展示
+
+```ejs
+<!-- src/pages/home/index.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>首页 - 我的网站</title>
+</head>
+<body>
+    <header>
+        <h1>欢迎来到我的网站</h1>
+    </header>
+    <main>
+        <p>这里是首页内容，搜索引擎可以直接抓取</p>
+    </main>
+    <script src="./index.js"></script>
+</body>
+</html>
+```
+
+### 高效开发页面（使用 Vue/React）
+
+当页面需要：
+- 复杂的用户交互
+- 响应式数据绑定
+- 组件化开发
+
+```vue
+<!-- src/pages/dashboard/index.vue -->
+<template>
+  <div class="dashboard">
+    <h1>{{ title }}</h1>
+    <div v-for="item in items" :key="item.id">
+      {{ item.name }}
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      title: '仪表盘',
+      items: []
+    }
+  }
+}
+</script>
+```
+
+## 环境变量配置
+
+项目支持 `.env` 文件配置环境变量：
+
+```bash
+# .env (基础环境)
+BASE_PATH=/
+
+# .env.development (开发环境)
+BASE_PATH=http://localhost:8080/
+
+# .env.production (生产环境)
+BASE_PATH=https://example.com/
+```
+
+## 构建优化
+
+
+### 代码分割策略
+
+- **vendor**: 第三方库打包
+- **shared**: 多次引用的公共模块
+- **common**: 默认公共模块
+
+### 生产环境优化
+
+- JavaScript 压缩（Terser）
+- CSS 压缩（CssMinimizerPlugin）
+- 移除 console 和 debugger
+- 资源哈希命名
+
+
+## 资源处理
+
+### 图片资源
+
+- 小于 2KB 的图片自动转为 Base64
+- 输出到 `dist/images/` 目录
+
+### 字体资源
+
+- 小于 2KB 的字体文件转为 Base64
+- 输出到 `dist/fonts/` 目录
+
+### 媒体文件
+
+- 音频/视频文件输出到 `dist/media/` 目录
+
+## 样式处理
+
+支持多种 CSS 预处理器：
+
+- **CSS**：原生 CSS 和模块化 CSS
+- **SCSS/SASS**：Sass 预处理器
+- **LESS**：Less 预处理器
+- **Stylus**：Stylus 预处理器
+
+## 策略总结
+
+### 混合开发策略
+
+| 页面类型 | 框架选择 | 适用场景 | 优势 |
+|---------|---------|----------|------|
+| SEO 关键页面 | EJS + jQuery | 首页、产品页、营销页 | 天然 SEO 友好，静态生成 |
+| 高效开发页面 | Vue 3/React SPA | 管理后台、仪表盘、内部系统 | 开发效率高，组件化 |
+
+### 纯 SPA 项目
+
+如果所有页面都需要使用统一框架：
+- **Vue 项目**：使用 Nuxt.js 进行 SSG
+- **React 项目**：使用 Next.js 进行 SSG
+
+## 插件系统
+
+- **VueLoaderPlugin**: Vue 文件处理
+- **MiniCssExtractPlugin**: CSS 提取
+- **CopyPlugin**: 静态资源复制
+- **HtmlWebpackPlugin**: HTML 生成
+- **DefinePlugin**: 环境变量注入
+
+## 自定义配置
+
+如需自定义配置，可在项目根目录创建 [webpack.config.js](file:///Users/sangyoutao/minespace/ink-qrcode-portal-web/webpack.config.js) 文件并使用 `webpack-merge` 扩展配置。
+
+## 案例
+- **pushplus推送加**: https://www.pushplus.plus/
+- **shareplus互联网分享平台**: https://www.shareplus.plus/
+- **ddnstorage**: https://www.ddnstorage.com.cn/
+
+## 常见问题
+
+### 1. 框架选择建议
+
+- **SEO 关键页面**：EJS + jQuery（天然 SSG 效果）
+- **高效开发页面**：Vue 3/React（SPA 模式）
+
+### 2. 环境变量不生效
+
+检查 `.env` 文件路径和变量命名是否正确。
+
+### 3. 多页面路由问题
+
+开发环境下会根据 `src/pages` 目录结构自动生成路由重写规则。
+
+## 贡献
+
+欢迎提交 Issue 和 Pull Request 来改进项目。
+
+## 许可证
+
+MIT License

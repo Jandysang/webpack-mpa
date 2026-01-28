@@ -1,0 +1,302 @@
+.testimonials-section {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 20
+}
+
+.testimonials-image {
+    width: 100%;
+    position: relative;
+    aspect-ratio: 648/480
+}
+
+.testimonials-carousel .testimonials-card .photo img,
+.testimonials-image img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 40px
+}
+
+.testimonials-slider-holder {
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    border-radius: 24px;
+    position: relative
+}
+
+.testimonials-slider-holder:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background: radial-gradient(68.34% 84.3% at 50% 51.5%, rgb(255 81 58 / .14) 0%, #fff0 100%), #f3f3f3;
+    z-index: -2
+}
+
+.testimonials-slider-holder:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    background: radial-gradient(61.06% 96.23% at 77.62% 32.11%, rgb(255 81 58 / .14) 0%, #fff0 100%), #f3f3f3;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.5s ease-in-out
+}
+
+.testimonials-slider-holder .testimonials-card {
+    background: 0 0
+}
+
+.testimonials-carousel .slick-track:after,
+.testimonials-carousel .slick-track:before,
+.testimonials-carousel .testimonials-slider-holder:after,
+.testimonials-carousel .testimonials-slider-holder:before,
+.testimonials-slider-holder .plus-link:after,
+.testimonials-slider-holder .testimonials-card:after,
+.testimonials-slider-holder .testimonials-card:before {
+    display: none
+}
+
+.no-touch .testimonials-slider-holder:hover:after {
+    opacity: 1
+}
+
+.testimonials-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0
+}
+
+.testimonials-controls .slick-dots {
+    margin: 0
+}
+
+.testimonials-controls .slick-next {
+    order: 2
+}
+
+.testimonials-carousel .testimonials-slider-holder {
+    width: 100%
+}
+
+.testimonials-carousel .slick-track {
+    display: flex
+}
+
+.testimonials-carousel .slick-slide {
+    float: none;
+    height: auto;
+    display: flex
+}
+
+.testimonials-carousel .slick-slide>div {
+    display: flex;
+    width: 100%;
+    flex-grow: 1
+}
+
+.testimonials-carousel .testimonials-card {
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column
+}
+
+.testimonials-carousel .testimonials-card .user {
+    flex-shrink: 0;
+    text-align: center;
+    margin-bottom: 24px
+}
+
+.testimonials-carousel .testimonials-card .user span {
+    font-size: 15px;
+    line-height: 1.45;
+    display: block;
+    margin-top: 5px
+}
+
+.testimonials-carousel .testimonials-card .photo {
+    position: relative;
+    aspect-ratio: 1/1;
+    margin-bottom: 16px
+}
+
+.testimonials-carousel .testimonials-card blockquote {
+    flex-grow: 1;
+    background-color: #f3f3f3;
+    padding: 20px;
+    border-radius: 24px
+}
+
+.testimonials-carousel .testimonials-card blockquote:before {
+    left: 20px;
+    top: 23px
+}
+
+.testimonials-carousel .testimonials-controls {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto
+}
+
+@media (min-width:568px) {
+    .testimonials-carousel .testimonials-slider:before {
+        content: "";
+        position: absolute;
+        left: 210px;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: #f3f3f3;
+        border-radius: 40px
+    }
+
+    .testimonials-carousel .testimonials-card {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        gap: 12px
+    }
+
+    .testimonials-carousel .testimonials-card .user {
+        width: 200px
+    }
+
+    .testimonials-carousel .testimonials-card .photo {
+        width: 100%;
+        height: 200px;
+        aspect-ratio: auto
+    }
+}
+
+@media (min-width:1024px) {
+    .testimonials-section {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center
+    }
+
+    .testimonials-image,
+    .testimonials-slider-holder {
+        width: 49.5%
+    }
+
+    .testimonials-carousel .testimonials-card blockquote {
+        padding: 40px;
+        border-radius: 40px
+    }
+
+    .testimonials-carousel .testimonials-card blockquote:before {
+        left: 40px;
+        top: 44px
+    }
+
+    .testimonials-carousel .testimonials-controls {
+        margin: -30px 0 0 210px;
+        justify-content: flex-start;
+        border-radius: 0 0 40px 40px;
+        padding: 55px 35px 40px;
+        background: #f3f3f3 url(@/assets/image/common/icon-plus-gray.png) no-repeat 40px 10px/21px 21px
+    }
+
+    .testimonials-carousel .testimonials-controls:before {
+        content: "";
+        left: 40px;
+        right: 40px;
+        top: 20px;
+        border-top: 1px solid #d9d9d9;
+        position: absolute
+    }
+
+    .testimonials-carousel .testimonials-controls:after {
+        content: "";
+        right: 40px;
+        width: 21px;
+        height: 21px;
+        top: 10px;
+        position: absolute;
+        background: url(@/assets/image/common/icon-plus-gray.png) no-repeat 0 0/21px 21px
+    }
+}
+
+@media (min-width:1200px) {
+    .testimonials-slider-holder {
+        border-radius: 40px
+    }
+
+    .testimonials-controls {
+        margin: 0;
+        position: absolute;
+        right: 20px;
+        bottom: 20px
+    }
+
+    .testimonials-controls .slick-dots {
+        margin: 0 17px
+    }
+
+    .testimonials-carousel .testimonials-slider:before {
+        left: 330px
+    }
+
+    .testimonials-carousel .testimonials-card .user {
+        width: 318px
+    }
+
+    .testimonials-carousel .testimonials-card .user span {
+        margin-top: 10px
+    }
+
+    .testimonials-carousel .testimonials-card .photo {
+        height: 308px;
+        margin-bottom: 20px
+    }
+
+    .testimonials-carousel .testimonials-card blockquote {
+        padding: 60px
+    }
+
+    .testimonials-carousel .testimonials-card blockquote:before {
+        left: 60px;
+        top: 64px
+    }
+
+    .testimonials-carousel .testimonials-controls {
+        margin-left: 330px;
+        padding-left: 50px;
+        padding-right: 50px;
+        background-position: 60px 10px;
+        margin-top: -49px
+    }
+
+    .testimonials-carousel .testimonials-controls:before {
+        left: 60px;
+        right: 60px
+    }
+
+    .testimonials-carousel .testimonials-controls:after {
+        right: 60px
+    }
+}
+
+@media (min-width:1440px) {
+    .testimonials-controls {
+        right: 47px;
+        bottom: 53px
+    }
+}

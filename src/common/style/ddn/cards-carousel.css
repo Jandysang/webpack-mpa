@@ -1,0 +1,111 @@
+.cards-carousel-wrap {
+    margin-bottom: -12px;
+    padding: 0 12px
+}
+
+.cards-carousel {
+    display: flex;
+    position: relative;
+    gap: 12px;
+    margin-bottom: 12px;
+    will-change: transform;
+    margin-right: -800px
+}
+
+.cards-carousel .card {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    flex-shrink: 0;
+    width: 200px
+}
+
+.cards-carousel .card img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 40px
+}
+
+.cards-carousel .card.with-text {
+    padding: 20px;
+    font-size: 12px;
+    line-height: 1.45;
+    text-transform: uppercase;
+    color: #fff
+}
+
+.cards-carousel .card.with-text p {
+    position: relative;
+    z-index: 5
+}
+
+.cards-carousel.small .card {
+    aspect-ratio: 428/425
+}
+
+.cards-carousel.reverse {
+    justify-content: flex-start;
+    margin: 0 0 0 -800px
+}
+
+@media (min-width:568px) {
+    .cards-carousel {
+        justify-content: flex-end
+    }
+}
+
+@media (min-width:768px) {
+    .cards-carousel {
+        margin-right: -500px
+    }
+
+    .cards-carousel .card {
+        width: 300px;
+        aspect-ratio: 428/425
+    }
+
+    .cards-carousel.small .card {
+        width: 200px
+    }
+
+    .cards-carousel.reverse {
+        margin: 0 0 0 -500px
+    }
+}
+
+@media (min-width:1200px) {
+    .cards-carousel .card {
+        width: 350px
+    }
+
+    .cards-carousel .card.with-text {
+        padding: 40px;
+        font-size: 15px
+    }
+
+    .cards-carousel.small .card {
+        width: 250px
+    }
+}
+
+@media (min-width:1440px) {
+    .cards-carousel {
+        margin-right: -800px
+    }
+
+    .cards-carousel .card {
+        width: 428px
+    }
+
+    .cards-carousel.small .card {
+        width: 300px
+    }
+
+    .cards-carousel.reverse {
+        margin: 0 0 0 -800px
+    }
+}

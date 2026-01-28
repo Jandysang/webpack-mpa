@@ -1,0 +1,70 @@
+.full-media-section .media-holder {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    aspect-ratio: 16/9;
+    max-width: 50rem;
+    margin: 0 auto
+}
+
+.full-media-section img,
+.full-media-section video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out
+}
+
+.full-media-section video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    opacity: 0
+}
+
+.full-media-section.small .media-holder+.benefits-list {
+    margin-top: 40px
+}
+
+.no-touch .full-media-section.has-video .media-holder:after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 58px;
+    height: 58px;
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTgiIGhlaWdodD0iNTgiIHZpZXdCb3g9IjAgMCA1OCA1OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMjkiIGZpbGw9InVybCgjcGFpbnQwX2xpbmVhcl8xNDMxXzkzNikiLz4KPHBhdGggZD0iTTM1LjUgMjguMTM0QzM2LjE2NjcgMjguNTE4OSAzNi4xNjY3IDI5LjQ4MTEgMzUuNSAyOS44NjZMMjYuNSAzNS4wNjIyQzI1LjgzMzMgMzUuNDQ3MSAyNSAzNC45NjYgMjUgMzQuMTk2MkwyNSAyMy44MDM4QzI1IDIzLjAzNCAyNS44MzMzIDIyLjU1MjkgMjYuNSAyMi45Mzc4TDM1LjUgMjguMTM0WiIgZmlsbD0id2hpdGUiLz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQwX2xpbmVhcl8xNDMxXzkzNiIgeDE9IjMuNDMxOTUiIHkxPSItNi4xNTc3M2UtMDYiIHgyPSI2NC42NzEzIiB5Mj0iOC4yMDQ0NCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjRjA0RTIzIi8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0Q3MTYxMiIvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+Cjwvc3ZnPgo=);
+    z-index: 20
+}
+
+.no-touch .full-media-section.has-video:hover .media-holder img {
+    opacity: 0
+}
+
+.no-touch .full-media-section.has-video:hover .media-holder video {
+    opacity: 1
+}
+
+@media (min-width:1024px) {
+    .full-media-section.small .media-holder {
+        aspect-ratio: 1308/440
+    }
+}
+
+@media (min-width:1200px) {
+
+    .full-media-section .media-holder,
+    .full-media-section img,
+    .full-media-section video {
+        border-radius: 40px
+    }
+
+    .full-media-section.small .media-holder+.benefits-list {
+        margin-top: 60px
+    }
+}

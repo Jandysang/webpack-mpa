@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<%= require('@/modules/common/html_head.ejs')({ title: 'DDN: Data Intelligence Platform Built for AI' }) %>
+
+  <body class="home wp-singular page-template-default page page-id-23 wp-theme-bigdrop-theme no-touch">
+    <div class="wrapper">
+      <%= require('@/modules/common/header.ejs')() %>
+        <main class="main">
+          <!-- <div id="content_1" style="display: none;"></div> -->
+          <!-- <div id="content_2" style="display: none;"></div> -->
+          <!-- <div class="hero-carousel hero-carousel--light">
+            <div class="hero-carousel__bg">
+              <img fetchpriority="low" decoding="async" width="1920" height="1081"
+                src="../../assets/image/home/ddn-homepage-bg-1920x1080-1.png" class="attachment-full size-full" alt=""
+                srcset="
+                ../../assets/image/home/ddn-homepage-bg-1920x1080-1.png 1920w,
+                ../../assets/image/home/ddn-homepage-bg-1920x1080-1-300x169.png 300w,
+                ../../assets/image/home/ddn-homepage-bg-1920x1080-1-1024x577.png 1024w,
+                ../../assets/image/home/ddn-homepage-bg-1920x1080-1-768x432.png 768w,
+                ../../assets/image/home/ddn-homepage-bg-1920x1080-1-1536x865.png 1536w
+              " sizes="(max-width: 1920px) 100vw, 1920px" loading="lazy" />
+            </div>
+
+            <div class="hero-carousel__slides">
+              <div class="hero-carousel__slide">
+                <div class="hero-carousel__content">
+                  <div class="container">
+                    <div class="hero-carousel__columns">
+                      <a href="/pressreleases.html?d=googlecloudlaunchesgeneralavailabilityofmanagedlustrepoweredbyddnsexascalertechnology"
+                        target="_self" class="hero-carousel__image" title="加速数据密集型工作负载，同时利用云灵活性优化成本">
+                        <img decoding="async" width="1024" height="537"
+                          src="../../assets/image/home/ddn-google-cloud-1200x628-v1b-2-1024x537.png"
+                          class="attachment-large size-large" alt="" srcset="
+                          ../../assets/image/home/ddn-google-cloud-1200x628-v1b-2-1024x537.png 1024w,
+                          ../../assets/image/home/ddn-google-cloud-1200x628-v1b-2-300x157.png 300w,
+                          ../../assets/image/home/ddn-google-cloud-1200x628-v1b-2-768x403.png 768w,
+                          ../../assets/image/home/ddn-google-cloud-1200x628-v1b-2.png 1200w
+                        " sizes="(max-width: 1024px) 100vw, 1024px" loading="lazy" fetchpriority="low" />
+                      </a>
+
+                      <div class="hero-carousel__copy">
+                        <div class="h1">
+                          <div class="h1">加速数据密集型工作负载；在优化成本的同时，充分发挥云的灵活性</div>
+                        </div>
+                        <a href="/pressreleases.html?d=googlecloudlaunchesgeneralavailabilityofmanagedlustrepoweredbyddnsexascalertechnology"
+                          target="_self" class="button small black"
+                          title="加速数据密集型工作负载，同时利用云灵活性优化成本"><span>了解更多</span><i><i></i></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="container hero-carousel__controller">
+              <div class="hero-carousel__controls"></div>
+            </div>
+          </div> -->
+          <div id="home-hero-carousel-content-1"></div>
+
+          <%= require('../../modules/home/hero_carousel_template.ejs')() %>
+
+          <div class="logos-list--alt">
+            <div class="container">
+              <div class="logos-list-wrap">
+                <ul class="logos-list">
+                  <li>
+                    <a href="/partnersdetail.html?d=nvidia">
+                      <img loading="lazy" decoding="async" width="731" height="136"
+                        src="../../assets/image/home/NVIDIA_logo.svg" class="attachment-full size-full" alt="NVIDIA"
+                        fetchpriority="low" /></a>
+                  </li>
+                  <li>
+                    <a href="/partnersdetail.html?d=vultr"><img loading="lazy" decoding="async" width="105" height="25"
+                        src="../../assets/image/home/Vultr_ACT.svg" class="attachment-full size-full" alt="Vultr"
+                        fetchpriority="low" /></a>
+                  </li>
+                  <li>
+                    <a href="/partnersdetail.html?d=googlecloud"><img loading="lazy" decoding="async" width="4096"
+                        height="2564" src="../../assets/image/home/google-cloud-logo-1.png"
+                        class="attachment-full size-full" alt="" srcset="../../assets/image/home/google-cloud-logo-1.png 4096w,../../assets/image/home/google-cloud-logo-1-300x188.png 300w,../../assets/image/home/google-cloud-logo-1-1024x641.png 1024w,../../assets/image/home/google-cloud-logo-1-768x481.png 768w,../../assets/image/home/google-cloud-logo-1-1536x962.png 1536w,../../assets/image/home/google-cloud-logo-1-2048x1282.png 2048w,../../assets/image/home/google-cloud-logo-1-1920x1202.png 1920w" sizes="auto, (max-width: 4096px) 100vw, 4096px" fetchpriority="low" /></a>
+                  </li>
+                  <li>
+                    <a href="/customersdetail.html?d=kla"><img loading="lazy" decoding="async" width="90" height="20"
+                        src="../../assets/image/home/kla_ACT.svg" class="attachment-full size-full" alt="KLA"
+                        fetchpriority="low" /></a>
+                  </li>
+                  <li>
+                    <a href="/successstoriesdetail.html?d=scaleway"><img loading="lazy" decoding="async" width="166"
+                        height="32" src="../../assets/image/home/download-1.svg" class="attachment-full size-full"
+                        alt="Scaleway" fetchpriority="low" /></a>
+                  </li>
+                  <li>
+                    <a href="/partnersdetail.html?d=supermicro"><img loading="lazy" decoding="async" width="630"
+                        height="323" src="../../assets/image/home/Supermicro_logo.png" class="attachment-full size-full"
+                        alt=""
+                        srcset="../../assets/image/home/Supermicro_logo.png 630w, ../../assets/image/home/Supermicro_logo-300x154.png 300w"
+                        sizes="auto, (max-width: 630px) 100vw, 630px" fetchpriority="low" /></a>
+                  </li>
+                  <li>
+                    <a href="/partnersdetail.html?d=lenovo"><img loading="lazy" decoding="async" width="400"
+                        height="100" src="../../assets/image/home/lenovo-logo-400x100-1.png"
+                        class="attachment-full size-full" alt=""
+                        srcset="../../assets/image/home/lenovo-logo-400x100-1.png 400w, ../../assets/image/home/lenovo-logo-400x100-1-300x75.png 300w"
+                        sizes="auto, (max-width: 400px) 100vw, 400px" fetchpriority="low" /></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="latest-news indent-top indent-bottom">
+            <div class="container">
+              <div class="latest-news__heading">
+                <h2>DDN 最新动态</h2>
+              </div>
+
+              <div id="home-lastest-news-content-2" class="latest-news__grid">
+                <!-- <a href="https://www.montereydataconference.org/" class="latest-news__card"
+                  title="2025 年蒙特雷数据会议 |加利福尼亚州蒙特雷">
+                  <div class="latest-news__img">
+                    <img loading="lazy" decoding="async" width="1200" height="628"
+                      src="../../assets/image/home/ddn-mdc-1200x628-1.png" class="attachment-full size-full" alt=""
+                      srcset="
+                      ../../assets/image/home/ddn-mdc-1200x628-1.png          1200w,
+                      ../../assets/image/home/ddn-mdc-1200x628-1-300x157.png   300w,
+                      ../../assets/image/home/ddn-mdc-1200x628-1-1024x536.png 1024w,
+                      ../../assets/image/home/ddn-mdc-1200x628-1-768x402.png   768w
+                    " sizes="auto, (max-width: 1200px) 100vw, 1200px" fetchpriority="low" />
+                  </div>
+                  <div class="latest-news__copy">
+                    <div class="latest-news__title">通过 DDN + NVIDIA 参考架构，全面加速 AI 服务与智能工厂</div>
+                    <div class="latest-news__meta">
+                      <div class="latest-news__date">2025-07-25</div>
+                      <div class="latest-news__link">
+                        了解更多 <span class="small-plus"><span></span></span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a href="/asktheexpertsmasteringaicloudscalehowprecisionmultitenancyunlocksperformanceandcontrol.html"
+                  class="latest-news__card" title="咨询专家：掌握 AI 云规模化——精准多租户如何解锁性能和控制">
+                  <div class="latest-news__img">
+                    <img loading="lazy" decoding="async" width="1200" height="628"
+                      src="../../assets/image/home/ddn-ask-the-experts-mastering-ai-cloud-scale-1200x628-on-demand.png"
+                      class="attachment-full size-full" alt="" srcset="
+                      ../../assets/image/home/ddn-ask-the-experts-mastering-ai-cloud-scale-1200x628-on-demand.png          1200w,
+                      ../../assets/image/home/ddn-ask-the-experts-mastering-ai-cloud-scale-1200x628-on-demand-300x157.png   300w,
+                      ../../assets/image/home/ddn-ask-the-experts-mastering-ai-cloud-scale-1200x628-on-demand-1024x536.png 1024w,
+                      ../../assets/image/home/ddn-ask-the-experts-mastering-ai-cloud-scale-1200x628-on-demand-768x402.png   768w
+                    " sizes="auto, (max-width: 1200px) 100vw, 1200px" fetchpriority="low" />
+                  </div>
+                  <div class="latest-news__copy">
+                    <div class="latest-news__title">DDN Infinia 入驻 Oracle 云基础设施：统一 AI 工作负载，实现高性能与简化管理</div>
+                    <div class="latest-news__meta">
+                      <div class="latest-news__date">2025-07-25</div>
+                      <div class="latest-news__link">
+                        了解更多 <span class="small-plus"><span></span></span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a href="https://www.thecube.net/events/supermicro/open-storage-summit-2025/content/Videos/3ed96af9-7704-4269-beb6-f59b5b6a4ea2?utm_source=session&#038;utm_medium=general&#038;utm_campaign=ddn2&#038;utm_id=OSS25"
+                  class="latest-news__card" title="软件定义存储解决方案 |网络研讨会">
+                  <div class="latest-news__img">
+                    <img loading="lazy" decoding="async" width="1200" height="628"
+                      src="../../assets/image/home/22_2025-OSS_Session-09_08-28_1200x628px.jpg"
+                      class="attachment-full size-full" alt="" srcset="
+                      ../../assets/image/home/22_2025-OSS_Session-09_08-28_1200x628px.jpg          1200w,
+                      ../../assets/image/home/22_2025-OSS_Session-09_08-28_1200x628px-300x157.jpg   300w,
+                      ../../assets/image/home/22_2025-OSS_Session-09_08-28_1200x628px-1024x536.jpg 1024w,
+                      ../../assets/image/home/22_2025-OSS_Session-09_08-28_1200x628px-768x402.jpg   768w
+                    " sizes="auto, (max-width: 1200px) 100vw, 1200px" fetchpriority="low" />
+                  </div>
+                  <div class="latest-news__copy">
+                    <div class="latest-news__title">软件定义存储解决方案 |网络研讨会</div>
+                    <div class="latest-news__meta">
+                      <div class="latest-news__date">2025-07-24</div>
+                      <div class="latest-news__link">
+                        了解更多 <span class="small-plus"><span></span></span>
+                      </div>
+                    </div>
+                  </div>
+                </a> -->
+              </div>
+            </div>
+          </div>
+
+          <%= require('../../modules/home/lastest_news_template.ejs')() %>
+          <div class="indent-bottom">
+            <div class="container">
+              <div class="cascade-block">
+                <div class="media-holder youtube-video">
+                  <div class="flying-press-youtube"
+                    data-src="https://www.youtube.com/embed/A2WSrvECImg?feature=oembed&autoplay=1"
+                    onclick="load_flying_press_youtube_video(this)">
+                    <img src="../../assets/image/home/A2WSrvECImg-hqdefault.jpg" width="480" height="360" alt=""
+                      loading="lazy" fetchpriority="low" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="68" height="48">
+                      <path fill="red"
+                        d="M67 8c-1-3-3-6-6-6-5-2-27-2-27-2S12 0 7 2C4 2 2 5 1 8L0 24l1 16c1 3 3 6 6 6 5 2 27 2 27 2s22 0 27-2c3 0 5-3 6-6l1-16-1-16z" />
+                      <path d="M45 24L27 14v20" fill="#fff" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="info">
+                  <h4>DDN生命科学解决方案</h4>
+                  <p>DDN 帮助生命科学团队突破数据壁垒，优化基因组学、影像学和实时诊断的 AI 流水线（pipelines）。</p>
+                  <a href="/solutions_lifesciences.html" target="_blank" class="plus-link">了解更多<span
+                      class="small-plus"><span></span></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cards-text indent-bottom">
+            <div class="container">
+              <div class="cards-text__grid">
+                <div class="cards-text__card cards-text__card--plain">
+                  <h4>DDN 助力 AI 驱动行业加速前行</h4>
+                  <p>DDN 持续引领 AI 基础设施发展，为高性能 AI 工作负载提供强大动力。</p>
+                </div>
+                <a href="/solutions_sovereignai.html" class="cards-text__card" title="人工智能主权">
+                  <div class="cards-text__img">
+                    <img loading="lazy" decoding="async" width="1200" height="628"
+                      src="../../assets/image/home/sovereign.png" class="attachment-full size-full" alt="" srcset="../../assets/image/home/sovereign.png 1200w,../../assets/image/home/sovereign-300x157.png 300w,../../assets/image/home/sovereign-1024x536.png 1024w,../../assets/image/home/sovereign-768x402.png 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" fetchpriority="low" />
+                  </div>
+                  <div class="cards-text__copy">
+                    <div class="cards-text__title">主权 AI 与国家安全</div>
+                    <div class="cards-text__text">
+                      <p>政府AI项目凭借DDN实现实时情报分析、自主决策和AI驱动的网络安全。</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="/solutions_cloudserviceproviders.html" class="cards-text__card" title="">
+                  <div class="cards-text__img">
+                    <img loading="lazy" decoding="async" width="1200" height="628" src="../../assets/image/home/ncp.png"
+                      class="attachment-full size-full" alt="" srcset="../../assets/image/home/ncp.png 1200w,../../assets/image/home/ncp-300x157.png 300w,../../assets/image/home/ncp-1024x536.png 1024w,../../assets/image/home/ncp-768x402.png 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" fetchpriority="low" />
+                  </div>
+                  <div class="cards-text__copy">
+                    <div class="cards-text__title">AI 云与服务提供商</div>
+                    <div class="cards-text__text">
+                      <p>超大规模服务商、NCP 和 CSP 借助 DDN，在全球范围运行 AI 服务。</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="/solutions_automotive.html" class="cards-text__card" title="">
+                  <div class="cards-text__img">
+                    <img loading="lazy" decoding="async" width="1200" height="628"
+                      src="../../assets/image/home/mobility.png" class="attachment-full size-full" alt="" srcset="../../assets/image/home/mobility.png 1200w,../../assets/image/home/mobility-300x157.png 300w,../../assets/image/home/mobility-1024x536.png 1024w,../../assets/image/home/mobility-768x402.png 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" fetchpriority="low" />
+                  </div>
+                  <div class="cards-text__copy">
+                    <div class="cards-text__title">自动驾驶与智能出行</div>
+                    <div class="cards-text__text">
+                      <p>更智能的 AI，更快速的训练，更安全的自动化系统。</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="/solutions_financialservices.html" class="cards-text__card" title="">
+                  <div class="cards-text__img">
+                    <img loading="lazy" decoding="async" width="1200" height="628"
+                      src="../../assets/image/home/financial.png" class="attachment-full size-full" alt="" srcset="../../assets/image/home/financial.png 1200w,../../assets/image/home/financial-300x157.png 300w,../../assets/image/home/financial-1024x536.png 1024w,../../assets/image/home/financial-768x402.png 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" fetchpriority="low" />
+                  </div>
+                  <div class="cards-text__copy">
+                    <div class="cards-text__title">金融服务与交易</div>
+                    <div class="cards-text__text">
+                      <p>支持 AI 风险建模、欺诈检测和高频交易，实现零延迟。</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="/solutions_lifesciences.html" class="cards-text__card" title="">
+                  <div class="cards-text__img">
+                    <img loading="lazy" decoding="async" width="1200" height="628"
+                      src="../../assets/image/home/life-sciences.png" class="attachment-full size-full" alt="" srcset="../../assets/image/home/life-sciences.png 1200w,../../assets/image/home/life-sciences-300x157.png 300w,../../assets/image/home/life-sciences-1024x536.png 1024w,../../assets/image/home/life-sciences-768x402.png 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" fetchpriority="low" />
+                  </div>
+                  <div class="cards-text__copy">
+                    <div class="cards-text__title">生命科学与药物研发</div>
+                    <div class="cards-text__text">
+                      <p>基因研究、生物信息学与 AI 医学突破，借助 DDN 提速约 10 倍。</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="indent-bottom">
+            <div class="container">
+              <div class="solutions">
+                <div class="section-heading centered">
+                  <div class="title has-animation fadeInUp">
+                    <h2>DDN数据智能平台驱动全球复杂的AI模型</h2>
+                  </div>
+                </div>
+
+                <div class="solutions-list has-slider">
+                  <div class="solution-item has-animation fadeInUp">
+                    <div class="image">
+                      <img loading="lazy" decoding="async" src="../../assets/image/home/XAI_Logo.svg" alt="" width="841"
+                        height="595" fetchpriority="low" />
+                    </div>
+                    <span class="h5"><a
+                        href="/pressreleases.html?d=ddnsdataplatformpropelsxaiscolossustoworldclassperformance"
+                        class="">xAI</a></span>
+                    <p>
+                      <strong>DDN 为 xAI 下一代 AI 模型提供算力支持</strong><br />
+                      前沿 AI 研究的数据基石
+                    </p>
+                  </div>
+                  <div class="solution-item has-animation fadeInUp">
+                    <div class="image">
+                      <img loading="lazy" decoding="async" src="../../assets/image/home/Jump-Trading-300x104.png" alt=""
+                        width="300" height="104" fetchpriority="low" />
+                    </div>
+                    <span class="h5"><a href="/customersdetail.html?d=jumptrading" class="">Jump Trading</a></span>
+                    <p>
+                      <strong>Jump Trading 引领前沿贸易</strong><br />
+                      先进的数据与研究驱动型贸易公司
+                    </p>
+                  </div>
+                  <div class="solution-item has-animation fadeInUp">
+                    <div class="image">
+                      <img loading="lazy" decoding="async"
+                        src="../../assets/image/home/helmholtz-munich-logo-300x102.png" alt="" width="300" height="102"
+                        fetchpriority="low" />
+                    </div>
+                    <span class="h5"><a href="/successstoriesdetail.html?d=helmholtzmunichsuccessstory"
+                        class="">Helmholtz Munich</a></span>
+                    <p>
+                      <strong>Helmholtz Munich 推动医学 AI 突破</strong><br />
+                      AI驱动的基因组研究效率提升约10倍
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="testimonial-big indent-bottom-medium">
+            <div class="container">
+              <div class="testimonial-big__grid">
+                <div class="testimonial-big__author">
+                  <div class="testimonial-big__image"><img loading="lazy" decoding="async" width="1627" height="1657"
+                      src="../../assets/image/home/jensen-huang.png" class="attachment-full size-full" alt=""
+                      srcset="../../assets/image/home/jensen-huang.png 1627w, ../../assets/image/home/jensen-huang-295x300.png 295w, ../../assets/image/home/jensen-huang-1005x1024.png 1005w, ../../assets/image/home/jensen-huang-768x782.png 768w, ../../assets/image/home/jensen-huang-1508x1536.png 1508w"
+                      sizes="auto, (max-width: 1627px) 100vw, 1627px" fetchpriority="low" /></div>
+                  <div class="testimonial-big__name">黄仁勋</div>
+                  <div class="testimonial-big__title">NVIDIA 创始人兼 CEO</div>
+                </div>
+
+                <blockquote class="testimonial-big__quote">
+                  <div class="testimonial-big__label">[客户评价]</div>
+                  <p>“NVIDIA 由 DDN 提供支持，没有 DDN，NVIDIA 的超级计算机不可能实现。”</p>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="indent-bottom">
+            <div class="container">
+              <div class="stats-media-cards">
+                <div class="card has-animation fadeInUp">
+                  <strong class="h1">约10倍</strong><strong class="h6">大规模 AI 性能加速</strong>
+                  <div class="image">
+                    <img loading="lazy" decoding="async" src="../../assets/image/home/homepage-images-500K-no-bg.svg"
+                      alt="" width="904" height="580" class="has-parallax" data-speed="-15" fetchpriority="low" />
+                  </div>
+                </div>
+                <div class="card has-animation fadeInUp">
+                  <strong class="h1">约10倍</strong><strong class="h6">投资回报率：降低能耗、占用空间和运维成本</strong>
+                  <div class="image">
+                    <img loading="lazy" decoding="async" src="../../assets/image/home/homepage-images-10S-no-bg.svg"
+                      alt="" width="904" height="580" class="has-parallax" data-speed="-15" fetchpriority="low" />
+                  </div>
+                </div>
+                <div class="card has-animation fadeInUp">
+                  <strong class="h1">约10倍</strong><strong class="h6">部署速度：无缝整合边缘、核心与云</strong>
+                  <div class="image">
+                    <img loading="lazy" decoding="async" src="../../assets/image/home/homepage-images-10x-no-bg.svg"
+                      alt="" width="904" height="580" class="has-parallax" data-speed="-15" fetchpriority="low" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cards-text cards-text--icons cards-text--five indent-bottom">
+            <div class="container">
+              <div class="cards-text__grid">
+                <div class="cards-text__card cards-text__card--plain">
+                  <h4>强大 AI —— 为突破边界的实干家打造</h4>
+                  <p>DDN数据智能平台专为实际AI应用场景设计，在边缘、核心和云环境中提供优异性能、出色效率与灵活架构，助力AI项目规模化部署。</p>
+                  <p>无论您正在训练千亿参数模型、运行实时推理，还是管理复杂数据流水线，DDN都能消除数据瓶颈，让AI全速前进。</p>
+                  <a href="/dataIntelligencePlatform.html" class="button black small">
+                    <span>立即体验DDN加速</span><i><i></i></i>
+                  </a>
+                </div>
+                <div class="cards-text__card">
+                  <div class="cards-text__img">
+                    <img loading="lazy" decoding="async" width="405" height="471"
+                      src="../../assets/image/home/03@8x.png" class="attachment-full size-full" alt=""
+                      srcset="../../assets/image/home/03@8x.png 405w, ../../assets/image/home/03@8x-258x300.png 258w"
+                      sizes="auto, (max-width: 405px) 100vw, 405px" fetchpriority="low" />
+                  </div>
+                  <div class="cards-text__copy">
+                    <div class="cards-text__title">约4倍 数据与模型加载速度提升</div>
+                    <div class="cards-text__text"></div>
+                  </div>
+                </div>
+                <div class="cards-text__card">
+                  <div class="cards-text__img">
+                    <img loading="lazy" decoding="async" width="513" height="482"
+                      src="../../assets/image/home/13@8x.png" class="attachment-full size-full" alt=""
+                      srcset="../../assets/image/home/13@8x.png 513w, ../../assets/image/home/13@8x-300x282.png 300w"
+                      sizes="auto, (max-width: 513px) 100vw, 513px" fetchpriority="low" />
+                  </div>
+                  <div class="cards-text__copy">
+                    <div class="cards-text__title">约15倍 检查点保存速度加快</div>
+                    <div class="cards-text__text"></div>
+                  </div>
+                </div>
+                <div class="cards-text__card">
+                  <div class="cards-text__img">
+                    <img loading="lazy" decoding="async" width="589" height="495"
+                      src="../../assets/image/home/14@8x.png" class="attachment-full size-full" alt=""
+                      srcset="../../assets/image/home/14@8x.png 589w, ../../assets/image/home/14@8x-300x252.png 300w"
+                      sizes="auto, (max-width: 589px) 100vw, 589px" fetchpriority="low" />
+                  </div>
+                  <div class="cards-text__copy">
+                    <div class="cards-text__title">约25倍 延迟降低</div>
+                    <div class="cards-text__text"></div>
+                  </div>
+                </div>
+                <div class="cards-text__card">
+                  <div class="cards-text__img">
+                    <img loading="lazy" decoding="async" width="443" height="417"
+                      src="../../assets/image/home/16@8x.png" class="attachment-full size-full" alt=""
+                      srcset="../../assets/image/home/16@8x.png 443w, ../../assets/image/home/16@8x-300x282.png 300w"
+                      sizes="auto, (max-width: 443px) 100vw, 443px" fetchpriority="low" />
+                  </div>
+                  <div class="cards-text__copy">
+                    <div class="cards-text__title">约35% AI训练效率提升</div>
+                    <div class="cards-text__text"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="complex-block indent-bottom">
+            <div class="container">
+              <div class="complex-block__grid">
+                <div class="complex-block__video">
+                  <video controls>
+                    <source src="https://www.ddn.com/wp-content/uploads/2025/04/homepage-video.mp4" type="video/mp4" />
+                    您的浏览器不支持视频标签。
+                  </video>
+                </div>
+
+                <div class="complex-block__content">
+                  <div class="complex-block__logo">
+                    <img loading="lazy" decoding="async" width="1407" height="156"
+                      src="../../assets/image/home/nvidia-smc-google-cloud-logos.svg" class="attachment-full size-full"
+                      alt="" fetchpriority="low" />
+                  </div>
+                  <h3 class="h2">携手共创 AI 未来</h3>
+                  <p>
+                    当 AI 领军者需要毫不妥协的性能时，他们选择 DDN —— 这个支撑全球先进 NVIDIA AI 环境的数据平台。DDN 与 NVIDIA、Supermicro、Google Cloud 及行业创新者携手，带来：
+                  </p>
+
+                  <div class="complex-block__cards">
+                    <div class="complex-block__card">
+                      <img loading="lazy" decoding="async" width="122" height="121"
+                        src="../../assets/image/home/unrivaled@2x.png" class="attachment-full size-full" alt=""
+                        fetchpriority="low" />
+                      <h5>出色的性能</h5>
+                      <p>规模化发挥更高效率，加速洞察。</p>
+                    </div>
+
+                    <div class="complex-block__card">
+                      <img loading="lazy" decoding="async" width="140" height="140"
+                        src="../../assets/image/home/ai-optimized@2x.png" class="attachment-full size-full" alt=""
+                        fetchpriority="low" />
+                      <h5>AI 优化存储</h5>
+                      <p>为大规模 LLM、生成式 AI 和深度学习而生。</p>
+                    </div>
+
+                    <div class="complex-block__card">
+                      <img loading="lazy" decoding="async" width="130" height="130"
+                        src="../../assets/image/home/seamless@2x.png" class="attachment-full size-full" alt=""
+                        fetchpriority="low" />
+                      <h5>无缝整合</h5>
+                      <p>云与本地灵活互联，确保数据始终随需而至。</p>
+                    </div>
+                  </div>
+
+                  <a href="/partners.html" class="button black small">
+                    <span>携手 DDN 驱动创新</span><i><i></i></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="indent-bottom">
+            <div class="container">
+              <div class="cta-block">
+                <div class="info-wrap">
+                  <h3>告别 GPU 空转—— 驱动高速运行、实现智能训练、弹性轻松扩展</h3>
+                  <div class="line"></div>
+                  <p>
+                    立即试用我们的 GPU 投资回报率计算器！空闲 GPU = 损失的投资回报率。低效的数据管道会限制性能，导致 AI 训练成为瓶颈，并使昂贵的 GPU 未得到充分利用。DDN 通过 TB/s 吞吐量、高速检查点和实时 AI 访问消除延迟，使 GPU 保持满载并推动更快的 AI 突破。
+                  </p>
+                  <a href="/gpuefficiencyroicalculator.html" class="button"><span>GPU 投资回报率计算器</span><i><i></i></i></a>
+                </div>
+                <div class="media">
+                  <img loading="lazy" decoding="async" src="../../assets/image/home/cta-block-img-01.png"
+                    alt="DDN’s ROI сalculator" width="398" height="398" fetchpriority="low" />
+                </div>
+                <div class="bg">
+                  <img loading="lazy" decoding="async" src="../../assets/image/home/cta-block-bg-01.jpg"
+                    alt="Background Image" width="1308" height="546" fetchpriority="low" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-section indent-top-small indent-bottom">
+            <div class="container">
+              <div class="contact-block has-animation fadeInUp"
+                data-lazy-style="background-image: url(images/contact-block-bg-1-87191adb9ebe508a.jpg)"
+                data-lazy-method="viewport" data-lazy-attributes="style">
+                <h3 class="h2">联系我们获取演示</h3>
+                <p>我们随时为您的 AI 数据需求提供支持。请联系 DDN 专家团队，获取个性化方案与技术咨询。</p>
+                <a href="/contactanaispecialist.html" class="button"><span>联系我们</span><i><i></i></i></a>
+              </div>
+
+              <div class="contact-block-benefits has-animation fadeInUp">
+                <div class="item">
+                  <div class="ico">
+                    <img loading="lazy" decoding="async" src="../../assets/image/home/contact-block-benefits-01.svg"
+                      alt="专业与创新" width="32" height="32" fetchpriority="low" />
+                  </div>
+                  <strong>专业与创新</strong>
+                </div>
+                <div class="item">
+                  <div class="ico">
+                    <img loading="lazy" decoding="async" src="../../assets/image/home/contact-block-benefits-02.svg"
+                      alt="定制化解决方案" width="33" height="32" fetchpriority="low" />
+                  </div>
+                  <strong>定制化解决方案</strong>
+                </div>
+                <div class="item">
+                  <div class="ico">
+                    <img loading="lazy" decoding="async" src="../../assets/image/home/contact-block-benefits-03.svg"
+                      alt="专属技术支持" width="32" height="32" fetchpriority="low" />
+                  </div>
+                  <strong>专属技术支持</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="section-bg has-parallax" data-speed="10">
+              <picture>
+                <source srcset="../../assets/image/home/contact-section-bg.jpg"
+                  media="(min-width:768px)" />
+                <img decoding="async" src="../../assets/image/home/contact-section-mobile-bg.jpg" alt="Background Image"
+                  width="360" height="327" loading="lazy" fetchpriority="low" />
+              </picture>
+            </div>
+          </div>
+        </main>
+        <%= require('../../modules/common/footer.ejs')() %>
+    </div>
+    <div class="test-image"></div>
+  </body>
+
+</html>

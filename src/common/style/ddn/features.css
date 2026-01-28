@@ -1,0 +1,106 @@
+.features {
+    background-color: #f3f3f3;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: contain;
+    border-radius: 24px;
+    padding: 20px
+}
+
+@media (min-width:768px) {
+    .features {
+        padding: 40px
+    }
+}
+
+@media (min-width:1200px) {
+    .features {
+        padding: 60px 60px 30px;
+        border-radius: 40px
+    }
+}
+
+.features .title-label {
+    margin-bottom: 12px
+}
+
+@media (min-width:1200px) {
+    .features .title-label {
+        margin-bottom: 16px
+    }
+}
+
+.features .short-info {
+    margin-bottom: 33px
+}
+
+@media (min-width:768px) {
+    .features .short-info {
+        max-width: 75%
+    }
+}
+
+@media (min-width:1200px) {
+    .features .short-info {
+        margin-bottom: 40px
+    }
+}
+
+.features h5,
+.features .h5 {
+    margin-bottom: 15px
+}
+
+.features ul {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 30px
+}
+
+@media (min-width:768px) {
+    .features ul {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem
+    }
+}
+
+@media (min-width:1200px) {
+    .features ul {
+        grid-template-columns: repeat(4, 1fr)
+    }
+}
+
+.features ul li {
+    width: 100%;
+    display: flex;
+    gap: 24px
+}
+
+.features ul .icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    margin-top: 2px
+}
+
+@media (min-width:1200px) {
+    .features ul .icon {
+        margin-top: 6px
+    }
+}
+
+.features .button-holder {
+    text-align: center
+}
+
+@media (min-width:1024px) {
+    .features .button-holder {
+        text-align: right
+    }
+}
+
+@media (min-width:1200px) {
+    .features .button-holder {
+        margin-right: -35px
+    }
+}

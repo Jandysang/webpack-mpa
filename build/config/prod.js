@@ -1,33 +1,48 @@
-const { merge } = require('webpack-merge');
-const baseConfig = require('./base');
-const htmlPlugins = require('../plugins/html');
+const TerserPlugin = require("terser-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
-/**
- * 生产环境配置
- */
-module.exports = merge(baseConfig(true), {
-    devtool: 'source-map', // 生产环境源码映射（可选）
-    plugins: [
-        ...htmlPlugins(true)
-    ],
+module.exports = {
+    devtool: false,
     optimization: {
         splitChunks: {
+            chunks: 'all',
             cacheGroups: {
+                // 单独处理其他大型库
                 vendor: {
-                    test: /node_modules/,
+                    test: /[\\/]node_modules[\\/]/,
                     name: 'vendors',
-                    chunks: 'all',
-                    priority: 10
+                    priority: 10,
+                    chunks: 'all'
                 },
-                // 预留Angular依赖拆分
-                // angular: {
-                //     test: /node_modules\/@angular/,
-                //     name: 'angular-vendors',
-                //     chunks: 'all',
-                //     priority: 20
-                // }
+                // 分离被多次引用的模块（超过2次）
+                shared: {
+                    name: 'shared',  // 被多次引用的模块会打包到这个文件
+                    minChunks: 2,    // 被至少引用2次以上的模块才会分离
+                    chunks: 'all',   // 包括同步和异步代码块
+                    priority: 5,     // 优先级
+                    enforce: true    // 强制创建 chunk
+                },
+                // 默认公共模块
+                default: {
+                    name: 'common',
+                    minChunks: 2,    // 被至少2次引用的模块才会被提取
+                    priority: 2,     // 较低优先级
+                    reuseExistingChunk: true // 复用已存在的 chunk
+                }
             }
         },
-        runtimeChunk: 'single' // 运行时单独打包（生产环境优化）
-    }
-});
+        minimizer: [
+            // JS 压缩
+            new TerserPlugin({
+                terserOptions: {
+                    compress: {
+                        drop_console: true, // 移除 console
+                        drop_debugger: true // 移除 debugger
+                    }
+                }
+            }),
+            // CSS 压缩
+            new CssMinimizerPlugin()
+        ]
+    },
+}

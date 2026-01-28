@@ -1,17 +1,27 @@
-const { merge } = require('webpack-merge');
 const path = require('path');
 const fs = require('fs');
-const baseConfig = require('./base');
-const htmlPlugins = require('../plugins/html');
 
-/**
- * 开发环境配置
- */
-module.exports = merge(baseConfig(false), {
+// 自定义插件来调试 rule 匹配
+class RuleDebugPlugin {
+  apply(compiler) {
+    compiler.hooks.compilation.tap('RuleDebugPlugin', (compilation) => {
+      compilation.hooks.buildModule.tap('RuleDebugPlugin', (module) => {
+        // console.log(`\n=== Module Building: ${module.resource} ===`);
+        
+        // 获取模块使用的 loader
+        const loaders = module.loaders || [];
+        // console.log('Applied loaders:');
+        loaders.forEach((loader, index) => {
+          console.log(`  ${index + 1}. ${loader.loader}?${JSON.stringify(loader.options || {})}`, JSON.stringify(loader));
+        });
+      });
+    });
+  }
+}
+
+
+module.exports = {
     devtool: 'cheap-module-source-map', // 开发环境源码映射
-    plugins: [
-        ...htmlPlugins(false)
-    ],
     devServer: {
         port: 8080,
         open: true,
@@ -28,15 +38,25 @@ module.exports = merge(baseConfig(false), {
         },
         client: { overlay: { errors: true, warnings: false } }
     },
+    plugins: [
+        new RuleDebugPlugin(),
+    ],
     optimization: {
         splitChunks: {
+            chunks: 'all',
             cacheGroups: {
                 vendor: {
-                    test: /node_modules/,
+                    test: /[\\/]node_modules[\\/]/,
                     name: 'vendors',
-                    chunks: 'all'
+                    chunks: 'all',
+                },
+                common: {
+                    name: 'common',
+                    minChunks: 2,
+                    chunks: 'all',
+                    enforce: true
                 }
             }
         }
-    }
-});
+    },
+}

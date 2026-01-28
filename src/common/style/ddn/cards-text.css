@@ -1,0 +1,139 @@
+.cards-text__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem
+}
+
+.cards-text__card {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2rem 1.5rem;
+    border-radius: 2rem;
+    background: #f3f3f3;
+    overflow: hidden
+}
+
+.cards-text__img {
+    aspect-ratio: 3 / 1;
+    object-fit: cover;
+    margin: -2rem -2rem 0;
+    overflow: hidden
+}
+
+.cards-text__img img {
+    transition: transform 0.3s
+}
+
+.cards-text__copy {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    margin-top: 1rem;
+    color: #1a1b1d;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0%
+}
+
+.cards-text__title {
+    font-weight: 600;
+    margin-bottom: .5rem
+}
+
+.cards-text__text {
+    font-size: 1rem;
+    opacity: .8
+}
+
+.cards-text__card:hover .cards-text__img img {
+    transform: scale(1.1)
+}
+
+.cards-text__card--plain {
+    background: unset;
+    justify-content: center
+}
+
+.cards-text__card--plain h4 {
+    line-height: 1.1;
+    margin-bottom: 1rem
+}
+
+.cards-text__card--plain p {
+    margin-bottom: 1rem
+}
+
+.cards-text__card--plain .button {
+    margin-top: 1rem
+}
+
+.cards-text--icons .cards-text__card {
+    background-color: unset;
+    box-shadow: 3px 3px 10px 0 rgb(235 235 235);
+    border: 1px solid #f5f5f5
+}
+
+.cards-text--icons .cards-text__img {
+    aspect-ratio: unset;
+    object-fit: unset;
+    margin: 0;
+    overflow: unset;
+    width: 5rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-start
+}
+
+.cards-text--icons .cards-text__img img {
+    transition: unset;
+    height: 100%;
+    width: 100%;
+    object-fit: contain
+}
+
+.cards-text--icons .cards-text__card:hover .cards-text__img img {
+    transform: unset
+}
+
+.cards-text--icons .cards-text__card--plain {
+    border: unset;
+    box-shadow: unset;
+    padding-top: unset;
+    padding-bottom: unset
+}
+
+.cards-text--five .cards-text__grid {
+    grid-template-columns: repeat(4, 1fr)
+}
+
+.cards-text--five .cards-text__card--plain {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3
+}
+
+@media (max-width:1199px) {
+    .cards-text--icons .cards-text__card {
+        grid-column: span 2
+    }
+
+    .cards-text--five .cards-text__card--plain {
+        grid-column: span 4
+    }
+}
+
+@media (max-width:767px) {
+    .cards-text__grid {
+        grid-template-columns: repeat(1, 1fr)
+    }
+
+    .cards-text__card--plain {
+        padding: 0;
+        border-radius: unset
+    }
+
+    .cards-text--icons .cards-text__card {
+        grid-column: span 4
+    }
+}
